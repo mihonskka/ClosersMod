@@ -1,0 +1,26 @@
+﻿    public class %NodeName% : ClosersTalkingNode
+    {
+        public override Type NextNode => %NextNodeName%;
+        public override string Name => %CharName%;
+        public override string Content => new TranslationItem() { Id=0,
+            SimplifiedChinese= "%Content%", 
+            TraditionalChinese="%TCContent%",
+            English= "", //todo
+            Japanese= "", //todo
+            Korean= ""//todo
+        }.TransToLocalization;
+        public override string StandingPath => %FrontName%;
+        public override string FaceChipPath => %FaceName%;
+        public override string AudioPath => %AudioName%;
+        public override List<DialogueEvent> DialogueEvents => new List<DialogueEvent>();
+		#region 额外属性
+		public override string LocalEvent => default;
+		public override Sprite Standing_3DMap => default;
+		public override string Standing_3DMap_Number => default;
+		public override int NameIndex => default;
+		public override int AutoChoiceIndex => default;
+		public override DialogueParameterSetBase LocalEventParameterSet => default;
+		public override string GlobalEvent => default;
+		public override DialogueParameterSetBase GlobalEventParameterSet => default;
+		#endregion
+    }

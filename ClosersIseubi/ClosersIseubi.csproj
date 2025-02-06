@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{448745CC-13E2-4D61-A19B-D8EB712E8613}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClosersIseubi</RootNamespace>
+    <AssemblyName>ClosersIseubi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\Steam\steamapps\workshop\content\1188930\ClosersMod\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HarmonyX.2.10.2\lib\net45\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Accessibility">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Unity.Addressables.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\BLL\LucyMagicChipBLL.cs" />
+    <Compile Include="Buffs\B_C5atk.cs" />
+    <Compile Include="Buffs\B_Chidorikatana.cs" />
+    <Compile Include="Buffs\B_Concentration.cs" />
+    <Compile Include="Buffs\B_ElectChain.cs" />
+    <Compile Include="Buffs\B_IraishinBeacon.cs" />
+    <Compile Include="Buffs\B_IraishinCover.cs" />
+    <Compile Include="Buffs\B_IraishinMode.cs" />
+    <Compile Include="Buffs\B_iseubiProxyBuff.cs" />
+    <Compile Include="Buffs\B_Iseubi_grab.cs" />
+    <Compile Include="Buffs\B_Iseubi_taunt.cs" />
+    <Compile Include="Buffs\B_LethalStrike.cs" />
+    <Compile Include="Buffs\B_LucyiseubiProxyBuff.cs" />
+    <Compile Include="Buffs\B_LucyMagicChip.cs" />
+    <Compile Include="Buffs\B_MagicChip.cs" />
+    <Compile Include="Buffs\B_MultiGravity.cs" />
+    <Compile Include="Buffs\B_MyiseubiProxyBuff.cs" />
+    <Compile Include="Buffs\B_PursueAndAttack.cs" />
+    <Compile Include="Buffs\B_ShinratenseExhausted.cs" />
+    <Compile Include="Buffs\B_StormEyes.cs" />
+    <Compile Include="Buffs\IBLL\ILucyMagicChipBLL.cs" />
+    <Compile Include="Cards\C_iseubi15.cs" />
+    <Compile Include="Cards\IseubiBaseCard.cs" />
+    <Compile Include="Cards\CL_iseubi0.cs" />
+    <Compile Include="Cards\CL_iseubi1.cs" />
+    <Compile Include="Cards\CO_iseubi10.cs" />
+    <Compile Include="Cards\C_iseubi0.cs" />
+    <Compile Include="Cards\C_iseubi1.cs" />
+    <Compile Include="Cards\C_iseubi10.cs" />
+    <Compile Include="Cards\C_iseubi11.cs" />
+    <Compile Include="Cards\C_iseubi12.cs" />
+    <Compile Include="Cards\C_iseubi13.cs" />
+    <Compile Include="Cards\C_iseubi14.cs" />
+    <Compile Include="Cards\C_iseubi2.cs" />
+    <Compile Include="Cards\C_iseubi3.cs" />
+    <Compile Include="Cards\C_iseubi4.cs" />
+    <Compile Include="Cards\C_iseubi5.cs" />
+    <Compile Include="Cards\C_iseubi6.cs" />
+    <Compile Include="Cards\C_iseubi7.cs" />
+    <Compile Include="Cards\C_iseubi8.cs" />
+    <Compile Include="Cards\C_iseubi9.cs" />
+    <Compile Include="Cards\C_iseubi_Cancel.cs" />
+    <Compile Include="Extendeds\CEn_iseubi0.cs" />
+    <Compile Include="Extendeds\CEn_iseubi1.cs" />
+    <Compile Include="Extendeds\CEn_iseubi2.cs" />
+    <Compile Include="Extendeds\CEn_iseubi3.cs" />
+    <Compile Include="Extendeds\SignExtendeds\CS_iseubi0.cs" />
+    <Compile Include="Extendeds\SignExtendeds\CS_iseubiPlusHit.cs" />
+    <Compile Include="IseubiCharacter.cs" />
+    <Compile Include="Isouryoku\BLL\ElectricalBLL.cs" />
+    <Compile Include="Isouryoku\BLL\GravityBLL.cs" />
+    <Compile Include="Isouryoku\BLL\IsouryokuBLL.cs" />
+    <Compile Include="Isouryoku\BLL\PluralismBLL.cs" />
+    <Compile Include="Isouryoku\BLL\TeleportBLL.cs" />
+    <Compile Include="Isouryoku\Electrical.cs" />
+    <Compile Include="Isouryoku\Gravity.cs" />
+    <Compile Include="Isouryoku\IBLL\IElectricalBLL.cs" />
+    <Compile Include="Isouryoku\IBLL\IGravityBLL.cs" />
+    <Compile Include="Isouryoku\IBLL\IPluralismBLL.cs" />
+    <Compile Include="Isouryoku\IBLL\ITeleportBLL.cs" />
+    <Compile Include="Isouryoku\Pluralism.cs" />
+    <Compile Include="Isouryoku\Teleport.cs" />
+    <Compile Include="KeyWords\IseubiEventKeys.cs" />
+    <Compile Include="KeyWords\IseubiKeyWords.cs" />
+    <Compile Include="KeyWords\TaskHandBookKeyWords.cs" />
+    <Compile Include="KeyWords\ThrottleKeyWords.cs" />
+    <Compile Include="Models\AuthorityConfigItem.cs" />
+    <Compile Include="Models\PassiveDescItem.cs" />
+    <Compile Include="Models\TurnResetInfo.cs" />
+    <Compile Include="Patchers\BattleInterceptor.cs" />
+    <Compile Include="Patchers\Registration\IseubiBroadcast.cs" />
+    <Compile Include="Patchers\CampHireInterceptor.cs" />
+    <Compile Include="Patchers\EncyclopediaInterceptor.cs" />
+    <Compile Include="Patchers\EquipInterceptors.cs" />
+    <Compile Include="Patchers\EventInterceptors.cs" />
+    <Compile Include="Patchers\Registration\IseubiPassiveDescCheck.cs" />
+    <Compile Include="Patchers\ScheduledTaskPatcher.cs" />
+    <Compile Include="Patchers\SkillAddingInterceptor.cs" />
+    <Compile Include="Patchers\SkillCheckInterceptors.cs" />
+    <Compile Include="Patchers\WitchSkillInterceptors.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P_Iseubi.cs" />
+    <Compile Include="Services\DotNetExtend.cs" />
+    <Compile Include="Services\ExpService.cs" />
+    <Compile Include="Services\IseubiService.cs" />
+    <Compile Include="Services\IseubiModalMessageService.cs" />
+    <Compile Include="Services\IseubiSoundService.cs" />
+    <Compile Include="Services\ToolBox.cs" />
+    <Compile Include="Services\UnmanagedService.cs" />
+    <Compile Include="Talking\ArchiveTalkingA.cs" />
+    <Compile Include="Talking\ArkTalkingA.cs" />
+    <Compile Include="Talking\ClockTowerTalkingA.cs" />
+    <Compile Include="Talking\ForeKingA.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Buffs\IClosersBuff\" />
+    <Folder Include="Cards\IClosersCard\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClosersHumanity\ClosersHumanity.csproj">
+      <Project>{84FFCF1C-D4EF-48C5-BCC7-F118EB1EB3B5}</Project>
+      <Name>ClosersHumanity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClosersMod\ClosersFramework.csproj">
+      <Project>{6044F461-A56C-46D9-8995-21FE343F3D95}</Project>
+      <Name>ClosersFramework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

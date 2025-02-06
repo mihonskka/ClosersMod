@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6044F461-A56C-46D9-8995-21FE343F3D95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClosersFramework</RootNamespace>
+    <AssemblyName>ClosersFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\Steam\steamapps\workshop\content\1188930\ClosersMod\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HarmonyX.2.10.2\lib\net45\0Harmony.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="spine-unity">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\spine-unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Unity.Addressables.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Unity.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClosersConfig.cs" />
+    <Compile Include="Data\CharacterLoadedData.cs" />
+    <Compile Include="Data\TalkingData.cs" />
+    <Compile Include="DebugItem\PropDebugModeAP.cs" />
+    <Compile Include="DebugItem\PropDebugModeCard.cs" />
+    <Compile Include="DebugItem\PropDebugModeClear.cs" />
+    <Compile Include="DebugItem\PropDebugModeTestBattle.cs" />
+    <Compile Include="Experiments\ArkCodeInterceptor.cs" />
+    <Compile Include="Experiments\S_Turquoise_R16_0_Particle.cs" />
+    <Compile Include="Filter\BaseFilterAttribute.cs" />
+    <Compile Include="GlobalSetting.cs" />
+    <Compile Include="KeyWords\InfoKeyWords.cs" />
+    <Compile Include="KeyWords\InterceptorsKeyWords.cs" />
+    <Compile Include="Models\ArtistMessage.cs" />
+    <Compile Include="Models\AuthorityConfigItem.cs" />
+    <Compile Include="Models\BGMUnit.cs" />
+    <Compile Include="Models\EnforceFilterItem.cs" />
+    <Compile Include="Models\ClosersTalkingNode.cs" />
+    <Compile Include="Models\ClosersTalkingOption.cs" />
+    <Compile Include="Models\ClosersTalkingTree.cs" />
+    <Compile Include="Models\Interface\IBroadcast.cs" />
+    <Compile Include="Models\Interface\IClosersCharacter.cs" />
+    <Compile Include="Models\Interface\IClosersCodeName.cs" />
+    <Compile Include="Models\Interface\IClosersTalkingRegister.cs" />
+    <Compile Include="Models\Interface\IPluginConfigs.cs" />
+    <Compile Include="Models\Interface\ICharacterSoundsToken.cs" />
+    <Compile Include="Models\ModelMessages.cs" />
+    <Compile Include="Models\PassiveDescItem.cs" />
+    <Compile Include="Models\QStandingInfo.cs" />
+    <Compile Include="Models\RecordInSave.cs" />
+    <Compile Include="Models\SoundEffectUnit.cs" />
+    <Compile Include="Models\SoundsComponent.cs" />
+    <Compile Include="Models\SoundUnit.cs" />
+    <Compile Include="Models\SubProgramMessage.cs" />
+    <Compile Include="Models\SubProgramRegistration.cs" />
+    <Compile Include="Models\TaskHandBookConfig.cs" />
+    <Compile Include="Models\TaskHandbookItemEntity.cs" />
+    <Compile Include="Models\TranslationItem.cs" />
+    <Compile Include="Patchers\BattleInterceptor.cs" />
+    <Compile Include="Patchers\BattleTextInterceptor.cs" />
+    <Compile Include="Patchers\CharacterInterceptor.cs" />
+    <Compile Include="Patchers\DialogueEndInterceptor.cs" />
+    <Compile Include="Patchers\ExpPassvieDescInterceptorData.cs" />
+    <Compile Include="Patchers\FriendShipWindowInterceptor.cs" />
+    <Compile Include="Patchers\LoadOverInterceptor.cs" />
+    <Compile Include="Patchers\LoadReadyInterceptors.cs" />
+    <Compile Include="Patchers\MapTalking\ArchiveInterceptor.cs" />
+    <Compile Include="Patchers\MapTalking\BakaAzarInterceptor.cs" />
+    <Compile Include="Patchers\MapTalking\ClockTowerInterceptor.cs" />
+    <Compile Include="Patchers\MapTalking\KingRoomInterceptor.cs" />
+    <Compile Include="Patchers\Registration\ClosersBroadcast.cs" />
+    <Compile Include="Patchers\Registration\ClosersPassiveDescCheck.cs" />
+    <Compile Include="Patchers\SkillAddingInterceptor.cs" />
+    <Compile Include="Patchers\StatInterceptor.cs" />
+    <Compile Include="Patchers\TurnStartInterceptor.cs" />
+    <Compile Include="PluginUnits\IClosersPlugin.cs" />
+    <Compile Include="PluginUnits\TaskHandbookPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="KeyWords\ModalKeyWords.cs" />
+    <Compile Include="KeyWords\PluginKeyWords.cs" />
+    <Compile Include="Services\ClosersService.cs" />
+    <Compile Include="Data\ClosersExtendText.cs" />
+    <Compile Include="Services\ClosersCharacterSoundService.cs" />
+    <Compile Include="Services\CodeManager\AccidentProneAttribute.cs" />
+    <Compile Include="Services\CodeManager\NoReferenceAttribute.cs" />
+    <Compile Include="Services\CombatStagePublicService.cs" />
+    <Compile Include="Services\ConfigReaderService.cs" />
+    <Compile Include="Services\DomainPathService.cs" />
+    <Compile Include="Services\DotNetExtend.cs" />
+    <Compile Include="Services\Enum.cs" />
+    <Compile Include="Services\ImageService.cs" />
+    <Compile Include="Services\OpenCVService.cs" />
+    <Compile Include="Services\ProcessMessengerService.cs" />
+    <Compile Include="Services\SoundService.cs" />
+    <Compile Include="Services\PatchRegeditService.cs" />
+    <Compile Include="Services\PluginUnitService.cs" />
+    <Compile Include="Services\RuntimeClassService.cs" />
+    <Compile Include="Services\SnowService.cs" />
+    <Compile Include="Services\TalkingService.cs" />
+    <Compile Include="Services\TaskHandbookSerivce.cs" />
+    <Compile Include="Services\ThrottleService.cs" />
+    <Compile Include="Services\ClosersLogger.cs" />
+    <Compile Include="Services\EnforceAddService.cs" />
+    <Compile Include="Services\EventDispather.cs" />
+    <Compile Include="Services\PassiveDescriptionService.cs" />
+    <Compile Include="Services\ToolBox.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Templates\ClosersBaseActiveItem.cs" />
+    <Compile Include="Templates\ClosersBaseActiveItemEffect.cs" />
+    <Compile Include="Templates\ClosersBaseBuff.cs" />
+    <Compile Include="Templates\ClosersBaseCard.cs" />
+    <Compile Include="Templates\ClosersBaseCharacter.cs" />
+    <Compile Include="Templates\ClosersBaseDialogueEvent.cs" />
+    <Compile Include="Templates\ClosersBaseEquipmentEffect.cs" />
+    <Compile Include="Templates\ClosersBaseExtend.cs" />
+    <Compile Include="Templates\ClosersBasePassiveItem.cs" />
+    <Compile Include="Templates\ClosersEmptySkillExtends.cs" />
+    <Compile Include="Templates\DE_Dust2.cs" />
+    <Compile Include="Templates\IClosersBattleUnit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Patchers\Debug\" />
+    <Folder Include="Services\StagingTalking\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DABD93C5-62E1-4581-A267-180FC91C3C61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClosersTina</RootNamespace>
+    <AssemblyName>ClosersTina</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\Steam\steamapps\workshop\content\1188930\ClosersMod\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\packages\HarmonyX.2.10.2\lib\net45\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Accessibility" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Addressables">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Unity.Addressables.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\B_Abrasion.cs" />
+    <Compile Include="Buffs\B_C4.cs" />
+    <Compile Include="Buffs\B_DefendSignal.cs" />
+    <Compile Include="Buffs\B_FirstAidSignal.cs" />
+    <Compile Include="Buffs\B_Fridge.cs" />
+    <Compile Include="Buffs\B_Overheat.cs" />
+    <Compile Include="Buffs\B_SpaceDodge.cs" />
+    <Compile Include="Buffs\B_SupplySignal.cs" />
+    <Compile Include="Buffs\B_tina2_0.cs" />
+    <Compile Include="Buffs\B_TinaC2def.cs" />
+    <Compile Include="Buffs\B_TinaC7atk.cs" />
+    <Compile Include="Cards\CL_tina0.cs" />
+    <Compile Include="Cards\CL_tina1.cs" />
+    <Compile Include="Cards\C_tina0.cs" />
+    <Compile Include="Cards\C_tina1.cs" />
+    <Compile Include="Cards\C_tina10.cs" />
+    <Compile Include="Cards\C_tina11.cs" />
+    <Compile Include="Cards\C_tina11_Target.cs" />
+    <Compile Include="Cards\C_tina12.cs" />
+    <Compile Include="Cards\C_tina13.cs" />
+    <Compile Include="Cards\C_tina2.cs" />
+    <Compile Include="Cards\C_tina3.cs" />
+    <Compile Include="Cards\C_tina4.cs" />
+    <Compile Include="Cards\C_tina5.cs" />
+    <Compile Include="Cards\C_tina6.cs" />
+    <Compile Include="Cards\C_tina7.cs" />
+    <Compile Include="Cards\C_tina8.cs" />
+    <Compile Include="Cards\C_tina9.cs" />
+    <Compile Include="Cards\TinaBaseCard.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Data\BuffStagingArea.cs" />
+    <Compile Include="KeyWords\ThrottleKeyWords.cs" />
+    <Compile Include="KeyWords\TinaEventKeys.cs" />
+    <Compile Include="KeyWords\TinaKeyWords.cs" />
+    <Compile Include="Models\BuffStagingUnit.cs" />
+    <Compile Include="Models\ClosersRegistBuff.cs" />
+    <Compile Include="Patcher\CampHireInterceptors.cs" />
+    <Compile Include="Patcher\Registration\TinaPassiveDescCheck.cs" />
+    <Compile Include="Patcher\StageReadyInitInterceptor.cs" />
+    <Compile Include="Patcher\LevelInterceptors.cs" />
+    <Compile Include="Patcher\PassiveInterceptors.cs" />
+    <Compile Include="Patcher\TargetInterceptors.cs" />
+    <Compile Include="Patcher\Registration\TinaBroadcast.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P_Tina.cs" />
+    <Compile Include="Services\BuffStagingService.cs" />
+    <Compile Include="Services\ExpService.cs" />
+    <Compile Include="Services\TinaAudioService.cs" />
+    <Compile Include="Services\TinaModalMessageService.cs" />
+    <Compile Include="Services\TinaService.cs" />
+    <Compile Include="Services\TinaSoundService.cs" />
+    <Compile Include="Services\UnmanagedService.cs" />
+    <Compile Include="Talking\ArchiveTalkingA.cs" />
+    <Compile Include="Talking\ArkTalkingA.cs" />
+    <Compile Include="Talking\ClockTowerTalkingA.cs" />
+    <Compile Include="Talking\ForeKingA.cs" />
+    <Compile Include="TinaCharacter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extendeds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClosersHumanity\ClosersHumanity.csproj">
+      <Project>{84FFCF1C-D4EF-48C5-BCC7-F118EB1EB3B5}</Project>
+      <Name>ClosersHumanity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClosersMod\ClosersFramework.csproj">
+      <Project>{6044F461-A56C-46D9-8995-21FE343F3D95}</Project>
+      <Name>ClosersFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

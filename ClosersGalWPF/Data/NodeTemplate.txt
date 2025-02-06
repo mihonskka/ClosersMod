@@ -1,0 +1,19 @@
+﻿    public class %NodeName% : ClosersTalkingNode
+    {
+        public override Type NextNode => %NextNodeName%;
+        public override string Name => %CharName%;
+        public override string Content => new TranslationItem() { Id=0,
+            SimplifiedChinese= "%Content%", 
+            TraditionalChinese="%TCContent%",
+            English= "", //todo
+            Japanese= "", //todo
+            Korean= ""//todo
+        }.TransToLocalization;
+        public override string StandingPath => %FrontName%;
+        public override string FaceChipPath => %FaceName%;
+        public override string AudioPath => %AudioName%;
+		public override List<DialogueEvent> GetDEList()
+		{
+			return new List<DialogueEvent>() { };
+		};
+    }
