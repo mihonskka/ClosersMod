@@ -1,7 +1,7 @@
 ﻿using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
 using ClosersFramework.KeyWords;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using HarmonyLib;
 using System;

@@ -1,5 +1,5 @@
 ﻿using ClosersFramework.Patchers.Registration;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
 using System;

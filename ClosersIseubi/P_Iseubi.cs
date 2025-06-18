@@ -2,7 +2,7 @@
 using ClosersIseubi.Isouryoku;
 using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using I2.Loc;
 using System;
@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using ClosersFramework.Templates;
 using ChronoArkMod;
 using ClosersFramework.Data;
+using ToolBox = ClosersIseubi.Service.ToolBox;
 
 namespace ClosersIseubi
 {

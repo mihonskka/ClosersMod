@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
 using ClosersFramework.Models.Interface;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using UnityEngine;
 using ClosersFramework.Templates;
 

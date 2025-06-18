@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\Steam\steamapps\workshop\content\1188930\ClosersMod\Assemblies\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\workshop\content\1188930\ClosersMod\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -38,22 +38,24 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\ClosersHumanity\bin\Debug\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\DOTween.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="spine-unity">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\spine-unity.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\spine-unity.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
@@ -90,38 +92,47 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Addressables">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Unity.Addressables.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Unity.Addressables.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.ResourceManager">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Unity.ResourceManager.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\Unity.ResourceManager.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>D:\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -212,6 +223,7 @@
     <Compile Include="Services\EventDispather.cs" />
     <Compile Include="Services\PassiveDescriptionService.cs" />
     <Compile Include="Services\ToolBox.cs" />
+    <Compile Include="Services\TurnResetInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Templates\ClosersBaseActiveItem.cs" />
     <Compile Include="Templates\ClosersBaseActiveItemEffect.cs" />

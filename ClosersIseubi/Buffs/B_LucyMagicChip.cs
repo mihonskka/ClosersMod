@@ -4,7 +4,7 @@ using ClosersIseubi.Isouryoku;
 using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
 using ClosersFramework.KeyWords;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,5 @@
 ﻿using ChronoArkMod.DialogueCreate;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using ClosersFramework.Services;
 using Dialogical;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 
 namespace ClosersFramework.Models
 {

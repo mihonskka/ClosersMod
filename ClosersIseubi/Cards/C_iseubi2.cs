@@ -2,7 +2,7 @@
 using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
 using ClosersFramework.KeyWords;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using System;
 using System.Collections;
@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using ClosersFramework.Templates;
 using ClosersFramework.Data;
 

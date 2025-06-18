@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 
 namespace ClosersFramework.Models
 {

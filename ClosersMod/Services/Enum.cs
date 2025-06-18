@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClosersFramework.Service
+namespace ClosersFramework.Services
 {
     public static class Enum
     {

@@ -9,13 +9,13 @@ using ClosersIseubi.KeyWords;
 using ClosersIseubi.Models;
 using ClosersIseubi.Service;
 using ClosersFramework.Models;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using DarkTonic.MasterAudio;
 using GameDataEditor;
 using I2.Loc;
 using UnityEngine;
 using UnityEngine.UI;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 
 namespace ClosersIseubi.Cards
 {

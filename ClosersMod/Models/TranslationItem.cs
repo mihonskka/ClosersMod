@@ -1,5 +1,5 @@
 ﻿using ChronoArkMod;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using I2.Loc;
 using System;
 using System.Collections.Generic;

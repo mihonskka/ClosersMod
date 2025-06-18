@@ -1,4 +1,4 @@
-﻿using ClosersFramework.Service;
+﻿using ClosersFramework.Services;
 using ClosersFramework;
 using GameDataEditor;
 using HarmonyLib;

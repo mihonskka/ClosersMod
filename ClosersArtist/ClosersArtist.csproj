@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <BaseOutputPath>D:\Steam\steamapps\workshop\content\1188930\ClosersMod</BaseOutputPath>
+    <BaseOutputPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\1188930\ClosersMod</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

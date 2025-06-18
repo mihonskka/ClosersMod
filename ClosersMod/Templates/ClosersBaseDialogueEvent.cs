@@ -1,4 +1,4 @@
-﻿using ClosersFramework.Service;
+﻿using ClosersFramework.Services;
 using Dialogical;
 using System;
 using System.Collections;

@@ -1,5 +1,5 @@
 ﻿using ClosersFramework.Data;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using HarmonyLib;
 using System;

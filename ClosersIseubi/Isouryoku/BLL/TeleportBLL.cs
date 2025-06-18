@@ -1,7 +1,7 @@
 ﻿using ClosersIseubi.Isouryoku.IBLL;
 using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using System;
 using System.Collections.Generic;

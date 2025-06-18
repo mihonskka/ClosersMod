@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClosersFramework.KeyWords;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 
 namespace ClosersFramework.Patchers
 {

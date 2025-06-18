@@ -1,6 +1,6 @@
 ﻿using ChronoArkMod;
 using ClosersFramework.Data;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using Dialogical;
 using HarmonyLib;
 using Spine.Unity;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using UnityEngine;
 using ClosersFramework.KeyWords;
 

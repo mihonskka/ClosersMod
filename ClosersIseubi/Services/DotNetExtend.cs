@@ -1,5 +1,5 @@
 ﻿using ClosersFramework;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using System;
 using System.Collections;
 using System.Collections.Generic;

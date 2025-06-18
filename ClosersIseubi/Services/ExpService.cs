@@ -5,14 +5,14 @@ using ClosersFramework.Filter;
 using ClosersFramework.KeyWords;
 using ClosersFramework.Models;
 using ClosersFramework.PluginUnits;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using ClosersFramework.Service.CodeManager;
 
 namespace ClosersIseubi.Service

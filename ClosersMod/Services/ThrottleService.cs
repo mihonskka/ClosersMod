@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ClosersFramework.Service
+namespace ClosersFramework.Services
 {
     public static class ThrottleService
     {

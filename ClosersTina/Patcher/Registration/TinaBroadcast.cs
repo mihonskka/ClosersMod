@@ -1,7 +1,7 @@
 ﻿using ClosersFramework.Models;
 using ClosersFramework.Models.Interface;
 using ClosersFramework.Patchers.Registration;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using ClosersTina.Services;
 using System;
 using System.Collections.Generic;

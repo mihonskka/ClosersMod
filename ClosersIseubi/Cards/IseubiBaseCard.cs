@@ -7,11 +7,12 @@ using ClosersIseubi.Isouryoku;
 using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
 using ClosersFramework.Models.Interface;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using ClosersFramework.Service.CodeManager;
 using UnityEngine;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using ClosersFramework.Templates;
+using ToolBox = ClosersIseubi.Service.ToolBox;
 
 namespace ClosersIseubi.Cards
 {

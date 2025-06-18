@@ -11,7 +11,7 @@ using UnityEngine;
 //using Emgu.CV.Reg;
 //using Emgu.CV.Structure;
 using System.Drawing;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 
 namespace ClosersFramework.Services
 {

@@ -1,6 +1,6 @@
 ﻿using ChronoArkMod;
 using ClosersFramework.KeyWords;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using ClosersFramework.Services;
 using System;
 using System.Collections.Generic;

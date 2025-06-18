@@ -1,5 +1,5 @@
 ﻿using ClosersFramework.Patchers.Registration;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;

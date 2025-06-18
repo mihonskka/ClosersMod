@@ -1,12 +1,13 @@
 ﻿using ClosersIseubi.Isouryoku;
 using ClosersIseubi.Service;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClosersFramework.Templates;
+using ToolBox = ClosersIseubi.Service.ToolBox;
 
 namespace ClosersIseubi.Buffs
 {

@@ -1,4 +1,4 @@
-﻿using ClosersFramework.Service;
+﻿using ClosersFramework.Services;
 using ClosersFramework.Templates;
 using ClosersTina.KeyWords;
 using System;

@@ -3,7 +3,7 @@ using ClosersIseubi.KeyWords;
 using ClosersIseubi.Models;
 using ClosersIseubi.Service;
 using ClosersFramework.Models;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using I2.Loc;
 using System;
@@ -15,8 +15,9 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using ClosersFramework.Data;
+using ToolBox = ClosersIseubi.Service.ToolBox;
 
 namespace ClosersIseubi.Cards
 {

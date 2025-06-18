@@ -2,7 +2,8 @@
 using ChronoArkMod.DialogueCreate;
 using ChronoArkMod.ModData;
 using ClosersFramework.Data;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
+using ClosersFramework.Services;
 using Dialogical;
 using GameDataEditor;
 using HarmonyLib;
@@ -13,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 
 namespace ClosersFramework.Experiments
 {

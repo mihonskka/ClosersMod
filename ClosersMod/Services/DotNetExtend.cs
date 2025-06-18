@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Random = System.Random;
 
-namespace ClosersFramework.Service
+namespace ClosersFramework.Services
 {
     public static partial class DotNetExtend
     {

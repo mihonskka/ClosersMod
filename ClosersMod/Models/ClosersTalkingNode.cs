@@ -1,7 +1,7 @@
 ﻿using ChronoArkMod;
 using ChronoArkMod.DialogueCreate;
 using ClosersFramework.KeyWords;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using Dialogical.ParameterSets;
 using System;
 using System.Collections.Generic;

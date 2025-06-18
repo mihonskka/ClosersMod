@@ -1,7 +1,7 @@
 ﻿using ClosersIseubi.Isouryoku;
 using ClosersIseubi.KeyWords;
 using ClosersFramework.Models.Interface;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using ClosersFramework.Service.CodeManager;
 using GameDataEditor;
 using System;

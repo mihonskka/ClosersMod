@@ -1,7 +1,7 @@
 ﻿using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
 using ClosersFramework.KeyWords;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using I2.Loc;
 using System;
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using ClosersFramework.Templates;
 
 namespace ClosersIseubi.Extendeds

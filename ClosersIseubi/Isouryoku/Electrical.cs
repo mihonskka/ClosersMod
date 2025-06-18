@@ -1,5 +1,5 @@
 ﻿using ClosersIseubi.Service;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ using ClosersIseubi.Buffs.BLL;
 using ClosersIseubi.Isouryoku.BLL;
 using ClosersIseubi.Models;
 using ClosersIseubi.KeyWords;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 
 namespace ClosersIseubi.Isouryoku
 {

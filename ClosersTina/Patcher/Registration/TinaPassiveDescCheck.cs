@@ -1,7 +1,7 @@
 ﻿using ClosersFramework.Patchers.Registration;
 using ClosersTina.KeyWords;
 using ClosersTina.Services;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

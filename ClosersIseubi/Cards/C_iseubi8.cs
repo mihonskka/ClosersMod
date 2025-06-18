@@ -3,7 +3,7 @@ using ClosersIseubi.KeyWords;
 using ClosersIseubi.Models;
 using ClosersIseubi.Service;
 using ClosersFramework.Models;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using ChronoArkMod.ModEditor;
 
 namespace ClosersIseubi.Cards

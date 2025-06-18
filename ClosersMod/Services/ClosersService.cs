@@ -1,5 +1,5 @@
 ﻿using ClosersFramework.Data;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace ClosersFramework.Service
+namespace ClosersFramework.Services
 {
     public static class ClosersService
     {

@@ -1,4 +1,5 @@
 ﻿using ClosersFramework.Data;
+using ClosersFramework.Services;
 using ClosersFramework.Templates;
 using ClosersIseubi.Service;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ToolBox = ClosersIseubi.Service.ToolBox;
 
 namespace ClosersIseubi.Buffs
 {

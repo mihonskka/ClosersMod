@@ -1,5 +1,5 @@
 ﻿using ClosersFramework;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using ClosersTina.KeyWords;
 using GameDataEditor;
 using HarmonyLib;

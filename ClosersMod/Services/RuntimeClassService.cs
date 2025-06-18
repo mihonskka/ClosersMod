@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClosersFramework.Service
+namespace ClosersFramework.Services
 {
     #region 生成自定义动态类
     [NoReference]

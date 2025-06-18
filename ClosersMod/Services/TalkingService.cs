@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace ClosersFramework.Service
+namespace ClosersFramework.Services
 {
     public class TalkingService : DialogueCreator
     {

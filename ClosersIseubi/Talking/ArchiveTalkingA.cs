@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using TalkingKeyWords = ClosersHumanity.KeyWords.TalkingKeyWords;
 
 namespace ClosersIseubi.Talking

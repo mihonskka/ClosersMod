@@ -1,7 +1,7 @@
 ﻿using ChronoArkMod;
 using ChronoArkMod.ModData;
 using ChronoArkMod.Template;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ using ClosersFramework.KeyWords;
 using ChronoArkMod.DialogueCreate;
 using ChronoArkMod.ModData.Settings;
 using ClosersFramework.Models;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 using ClosersFramework.Models.Interface;
 using ClosersFramework.Templates;
 using Dialogical;

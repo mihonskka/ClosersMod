@@ -1,7 +1,7 @@
 ﻿using ClosersIseubi.Service;
 using ClosersFramework.Models;
 using ClosersFramework.Models.Interface;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;

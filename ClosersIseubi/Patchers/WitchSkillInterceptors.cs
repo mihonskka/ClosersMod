@@ -2,7 +2,7 @@
 using ClosersIseubi.Service;
 using ClosersFramework.KeyWords;
 using ClosersFramework.Models;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using HarmonyLib;
 using I2.Loc;

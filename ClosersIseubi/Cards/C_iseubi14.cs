@@ -1,12 +1,12 @@
 ﻿using ClosersIseubi.KeyWords;
 using ClosersIseubi.Service;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ClosersFramework.Service.Enum;
+using static ClosersFramework.Services.Enum;
 
 namespace ClosersIseubi.Cards
 {

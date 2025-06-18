@@ -1,4 +1,4 @@
-﻿using ClosersFramework.Service;
+﻿using ClosersFramework.Services;
 using HarmonyLib;
 using Mono.Cecil;
 using System;

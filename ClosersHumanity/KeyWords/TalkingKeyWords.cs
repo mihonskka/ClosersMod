@@ -20,7 +20,7 @@ namespace ClosersHumanity.KeyWords
             Japanese = "ルシー",
             Korean = "루시"
         }.TransToLocalization;
-		const string SmallLucyFolderPath = @"Assets/ClosersMod/Standing/Ark/Lucy/Talking/";
+		const string SmallLucyFolderPath = @"Assets/ClosersMod/Standing/Ark/Lucy/";
 		public const string LucyFaceChip0 = SmallLucyFolderPath + "F_Lucy_0.png";
         public const string LucyFaceChip1 = SmallLucyFolderPath + "F_Lucy_1.png";
         public const string LucyFaceChip2 = SmallLucyFolderPath + "F_Lucy_2.png";

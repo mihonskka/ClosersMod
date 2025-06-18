@@ -5,7 +5,7 @@ using ClosersFramework.Data;
 using ClosersFramework.KeyWords;
 using ClosersFramework.Models;
 using ClosersFramework.Patchers;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using ClosersFramework.Templates;
 using ClosersHumanity.KeyWords;
 using ClosersTina.Cards;

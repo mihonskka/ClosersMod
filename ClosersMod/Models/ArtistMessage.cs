@@ -1,4 +1,4 @@
-﻿using ClosersFramework.Service;
+﻿using ClosersFramework.Services;
 using ClosersFramework.Services;
 using Newtonsoft.Json;
 using System;

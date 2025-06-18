@@ -1,6 +1,6 @@
 ﻿using ClosersDebugMode.KeyWords;
 using ClosersFramework;
-using ClosersFramework.Service;
+using ClosersFramework.Services;
 using GameDataEditor;
 using HarmonyLib;
 using System;

@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ClosersFramework.Services.Enum;
 
 namespace ClosersIseubi.Cards
 {
     public class C_iseubi15:IseubiBaseCard
     {
-        public C_iseubi15():base(0,false,false,ClosersFramework.Service.Enum.CardType.Gravity)
+        public C_iseubi15():base(0,false,false,CardType.Gravity)
         {
 
         }
@@ -18,7 +19,7 @@ namespace ClosersIseubi.Cards
 
     public class C_iseubi15_0 : IseubiBaseCard
     {
-        public C_iseubi15_0() : base(0, false, false, ClosersFramework.Service.Enum.CardType.Gravity)
+        public C_iseubi15_0() : base(0, false, false, CardType.Gravity)
         {
 
         }
