@@ -1,4 +1,5 @@
 ﻿using ClosersTina.KeyWords;
+using ClosersTina.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,9 @@ namespace ClosersTina.Cards
     {
         public C_tina3() : base(false,0)
         {
-            
+            this.Weapon = TinaWeapons.Continue;
         }
-
-        public override void Init()
+		public override void Init()
         {
             base.Init();
         }

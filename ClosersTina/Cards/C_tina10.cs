@@ -1,5 +1,6 @@
 ﻿using ClosersFramework.Templates;
 using ClosersTina.KeyWords;
+using ClosersTina.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,12 @@ namespace ClosersTina.Cards
             Heal += (int)(hit.GetStat.maxhp * 0.25 + 1);
             base.BeforeHeal(hit, SP, Heal, Cri);
         }
-        public override void Init()
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		{
+			TinaService.SwitchWeapon(TinaWeapons.NoneOrOther);
+			base.SkillUseSingle(SkillD, Targets);
+		}
+		public override void Init()
         {
             base.Init();
             if (BattleSystem.instance != null && this.MySkill.IsCreatedInBattle && this.MySkill.AllExtendeds.All(t => t.Data.Key != TinaKeyWords.Ex_tina10))

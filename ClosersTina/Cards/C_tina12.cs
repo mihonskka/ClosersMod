@@ -21,11 +21,9 @@ namespace ClosersTina.Cards
             base.Init();
             this.PlusStat.Penetration = 500;
         }
-
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            
-            Targets.ForEach(t =>
+			Targets.ForEach(t =>
             {
                 BuffStagingService.AddRegistration(new BuffStagingUnit() { Owner = t as BattleEnemy, Buffs = t.Buffs.Select(u=>new ClosersRegistBuff { buffkey= u.BuffData.Key, remainTime=u.LifeTime }).ToList() });
                 t.Buffs.Where(u => !u.BuffData.Debuff).ToList().ForEach(u => u.SelfDestroy());

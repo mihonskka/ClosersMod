@@ -12,7 +12,7 @@ namespace ClosersTina.Services
 {
     public static class TinaAudioService
     {
-        public static void Play(string audioName, float volume)
+        public static void Play(string audioName, float volume = 3f)
         {
             if (string.IsNullOrWhiteSpace(audioName)) return;
             var audio = AddressableLoadManager.Instantiate(new GDEGameobjectDatasData(audioName).Gameobject_Path, AddressableLoadManager.ManageType.Battle);

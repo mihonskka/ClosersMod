@@ -7,6 +7,7 @@ using ClosersFramework.Services;
 using ClosersFramework.Service.CodeManager;
 using ClosersTina.KeyWords;
 using GameDataEditor;
+using ClosersTina.Services;
 
 namespace ClosersTina.Cards
 {
@@ -16,7 +17,7 @@ namespace ClosersTina.Cards
     public class C_tina11 : TinaBaseCard
     {
         public C_tina11() : base(false) { }
-        [AccidentProne]
+		[AccidentProne]
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
             var allytargets = this.BChar.MyTeam.Chars.ToList();

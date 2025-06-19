@@ -21,8 +21,11 @@ namespace ClosersTina.Cards
         {
             return base.ClosersDesc(desc).Replace("&a", ((int)Misc.PerToNum(this.BChar.GetStat.atk, 40f)).ToString()).Replace("&b", ((int)Misc.PerToNum(this.BChar.GetStat.atk, 33f)).ToString()).ToString();
         }
-
-        public override void SkillUseSingleAfter(Skill SkillD, List<BattleChar> Targets)
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		{
+			base.SkillUseSingle(SkillD, Targets);
+		}
+		public override void SkillUseSingleAfter(Skill SkillD, List<BattleChar> Targets)
         {
             base.SkillUseSingleAfter(SkillD, Targets);
 
@@ -51,13 +54,18 @@ namespace ClosersTina.Cards
         public C_tina1_0() : base(false, 0)
         {
             this.AudioName = TinaKeyWords.Closers_Tina_Shotgun_Audio;
-        }
+            this.Weapon = TinaWeapons.Shotgun;
+		}
         public override void Init()
         {
             base.Init();
             this.OnePassive = true;
         }
-        public override int DamageChange(Skill SkillD, BattleChar Target, int Damage, ref bool Cri, bool View)
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		{
+			base.SkillUseSingle(SkillD, Targets);
+		}
+		public override int DamageChange(Skill SkillD, BattleChar Target, int Damage, ref bool Cri, bool View)
         {
             this.SkillBasePlus.Target_BaseDMG = 0;
             if (Target is BattleEnemy && (Target as BattleEnemy).istaunt)
@@ -81,7 +89,7 @@ namespace ClosersTina.Cards
     {
         public C_tina1_1() : base(false, 0)
         {
-            
+            this.Weapon = TinaWeapons.Continue;
         }
 
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)

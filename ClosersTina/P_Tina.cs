@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using UnityEngine;
 using static System.Net.Mime.MediaTypeNames;
 using Random = System.Random;
+using EItem;
+using System.Windows.Markup;
 
 namespace ClosersTina
 {
@@ -344,5 +346,51 @@ namespace ClosersTina
                 }
             }
         }
+        TinaWeapons _nowWeapon = TinaWeapons.NoneOrOther;
+        public TinaWeapons NowWeapon { get => _nowWeapon; set
+            {
+                if (_nowWeapon != value)
+                {
+                    _nowWeapon = value;
+                    switch (value)
+                    {
+                        case TinaWeapons.Snipe:
+							TinaAudioService.Play(TinaKeyWords.Closers_Tina_SnipeSwitch_Audio);
+							break;
+						case TinaWeapons.Rifle:
+							TinaAudioService.Play(TinaKeyWords.Closers_Tina_RifleSwitch_Audio);
+							break;
+						case TinaWeapons.Shotgun:
+							TinaAudioService.Play(TinaKeyWords.Closers_Tina_ShotgunSwitch_Audio);
+							break;
+						case TinaWeapons.SMG:
+							TinaAudioService.Play(TinaKeyWords.Closers_Tina_SubmachineGunSwitch_Audio);
+							break;
+						case TinaWeapons.Machinegun:
+							TinaAudioService.Play(TinaKeyWords.Closers_Tina_MachineGunSwitch_Audio);
+							break;
+						case TinaWeapons.Pistol:
+							TinaAudioService.Play(TinaKeyWords.Closers_Tina_PistolSwitch_Audio);
+							break;
+						case TinaWeapons.Grenade:
+							TinaAudioService.Play(TinaKeyWords.Closers_Tina_ItemSwitch_Audio);
+							break;
+					}
+				}
+            } }
+
+		
     }
+	public enum TinaWeapons
+	{
+		NoneOrOther = 0,
+		Snipe = 1,
+		Rifle = 2,
+		Shotgun = 3,
+		SMG = 4,
+		Machinegun = 5,
+		Pistol = 6,
+		Grenade = 7,
+        Continue = 8
+	}
 }

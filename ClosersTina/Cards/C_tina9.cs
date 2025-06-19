@@ -14,11 +14,11 @@ namespace ClosersTina.Cards
         {
             this.AudioName = TinaKeyWords.Closers_Tina_MachineGun5Combo_Audio;
             this.ComboGapSecond = 0;
-        }
-
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+			this.Weapon = TinaWeapons.Machinegun;
+		}
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             var skill = Skill.TempSkill(TinaKeyWords.C_tina9_0, this.BChar, this.BChar.MyTeam);
             skill.AutoDelete = 1;
             this.BChar.MyTeam.Add(skill, false);
@@ -35,13 +35,13 @@ namespace ClosersTina.Cards
             base.Init();
         }
 
-        public void TurnEnd()
+		public void TurnEnd()
         {
             TinaService.AddOverheat(this.BChar, 7);
         }
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            TinaSoundService.RandomSound(TinaKeyWords.V_TinaMachineGun0_, 1, this);
+			TinaSoundService.RandomSound(TinaKeyWords.V_TinaMachineGun0_, 1, this);
             base.SkillUseSingle(SkillD, Targets);
         }
     }

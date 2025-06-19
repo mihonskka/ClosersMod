@@ -12,8 +12,7 @@ namespace ClosersTina.Cards
     public class C_tina5:TinaBaseCard
     {
         public C_tina5():base(false,0) { }
-
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
             base.SkillUseSingle(SkillD, Targets);
             //clog.tw("冰箱sus");

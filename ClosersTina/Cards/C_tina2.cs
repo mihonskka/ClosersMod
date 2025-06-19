@@ -86,17 +86,17 @@ namespace ClosersTina.Cards
         public C_tina2_0() : base()
         {
             this.AudioName = TinaKeyWords.Closers_Tina_Pistol_Audio;
-        }
-
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+            this.Weapon = TinaWeapons.Pistol;
+		}
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            /*Targets.ForEach(t =>
+			/*Targets.ForEach(t =>
             {
                 BuffStagingService.AddRegistration(new BuffStagingUnit() { Buffs = t.Buffs.Select(u => new ClosersRegistBuff() { buffkey = u.BuffData.Key, remainTime = u.LifeTime }).ToList(), Owner = t as BattleEnemy });
                 t.Buffs.Where(u => !u.BuffData.Debuff).ToList().ForEach(u => u.SelfDestroy());
                 //t.Buffs.RemoveAll(u => !u.BuffData.Debuff);
             });*/
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
         }
         public override void AttackEffectSingle(BattleChar hit, SkillParticle SP, int DMG, int Heal)
         {
@@ -109,14 +109,14 @@ namespace ClosersTina.Cards
         public C_tina2_1() : base(false)
         {
             this.AudioName = TinaKeyWords.Closers_Tina_Shotgun_Audio;
-        }
+			this.Weapon = TinaWeapons.Shotgun;
+		}
         public override void Init()
         {
             base.Init();
             this.OnePassive = true;
         }
-
-        public override int DamageChange(Skill SkillD, BattleChar Target, int Damage, ref bool Cri, bool View)
+		public override int DamageChange(Skill SkillD, BattleChar Target, int Damage, ref bool Cri, bool View)
         {
             this.SkillBasePlus.Target_BaseDMG = 0;
             if (Target is BattleEnemy && (Target as BattleEnemy).istaunt)
@@ -131,7 +131,7 @@ namespace ClosersTina.Cards
         }
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             TinaSoundService.RandomSound(TinaKeyWords.V_TinaPistol, 4, this);
         }
     }
@@ -142,10 +142,11 @@ namespace ClosersTina.Cards
             this.PlusStat.Penetration = 20;
             this.AudioName = TinaKeyWords.Closers_Tina_Rifle_Audio;
             this.ComboGapSecond = 0.05f;
-        }
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+			this.Weapon = TinaWeapons.Rifle;
+		}
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             TinaSoundService.RandomSound(TinaKeyWords.V_TinaShoot, 6, this);
         }
     }
@@ -156,10 +157,11 @@ namespace ClosersTina.Cards
             this.DamageThreshold = 20;
             this.AudioName = TinaKeyWords.Closers_Tina_SubmachineGun5Combo_Audio;
             this.ComboGapSecond = 0;
-        }
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+			this.Weapon = TinaWeapons.SMG;
+		}
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             TinaSoundService.RandomSound(TinaKeyWords.V_TinaBlade, 8, this);
         }
     }
@@ -170,13 +172,13 @@ namespace ClosersTina.Cards
             this.OnePassive = true;
             this.AudioName = TinaKeyWords.Closers_Tina_Snipe_Audio;
             this.AudioForeSecond = 1f;
-        }
-
-        public int SeniorAP { get; set; }
+			this.Weapon = TinaWeapons.Snipe;
+		}
+		public int SeniorAP { get; set; }
 
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             //if (BattleSystem.instance.AllyTeam.Skills_Deck.Count >= 0) BattleSystem.instance.StartCoroutine(BattleSystem.I_OtherSkillSelect(BattleSystem.instance.AllyTeam.Skills_Deck.Take(4).ToList(), new SkillButton.SkillClickDel(this.Del), ScriptLocalization.System_SkillSelect.SkillPreView, false, true, true, false, false));
             TinaSoundService.RandomSound(TinaKeyWords.V_TinaSniper, 4, this);
         }

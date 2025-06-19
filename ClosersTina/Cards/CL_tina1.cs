@@ -126,14 +126,16 @@ namespace ClosersTina.Cards
             return base.ClosersDesc(desc).Replace("&a", TinaService.FindTinaInInvest()?.get_stat.atk.ToString() ?? "14");
         }
 
-        public override void SkillUseHand(BattleChar Target)
+		public override void SkillUseHand(BattleChar Target)
         {
             base.SkillUseHand(Target);
         }
         public override bool TargetHit(BattleChar Target) => Target.HP <= Target.GetStat.maxhp * 0.5 || base.TargetHit(Target);
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            TinaSoundService.RandomSound(TinaKeyWords.V_TinaL, 7, this);
+            TinaService.SwitchWeapon(TinaWeapons.Snipe);
+
+			TinaSoundService.RandomSound(TinaKeyWords.V_TinaL, 7, this);
             if (Targets.Any(t=>t.HP <= t.GetStat.maxhp * 0.5))
             {
                 this.PlusStat.cri = 500;

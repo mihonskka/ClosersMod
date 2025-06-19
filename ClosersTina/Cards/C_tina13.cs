@@ -2,6 +2,7 @@
 using ClosersTina.Services;
 using GameDataEditor;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,16 +18,24 @@ namespace ClosersTina.Cards
 		public C_tina13() : base(true, 2)
 		{ 
 			this.AudioName = TinaKeyWords.Closers_Tina_SubmachineGun5Combo_Audio;
+			this.Weapon = TinaWeapons.SMG;
+			this.AfterComboAction += () => TinaAudioService.Play(TinaKeyWords.Closers_Tina_SubmachineGunReload_Audio);
+			this.ComboGapSecond = 0.12f;
 		}
 		public override void Init()
 		{
 			base.Init();
 		}
+
+
 		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
 		{
 			base.SkillUseSingle(SkillD, Targets);
 			TinaSoundService.RandomSound(TinaKeyWords.V_TinaBlade, 8, this);
 		}
+
+		
+
 		public override bool TargetHit(BattleChar Target)
 		{
 			return Target.GetBuffs(BattleChar.GETBUFFTYPE.CC, false, false).Count != 0;

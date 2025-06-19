@@ -15,10 +15,11 @@ namespace ClosersTina.Cards
         {
             this.DamageThreshold = 50;
             this.AudioName = TinaKeyWords.Closers_Tina_Rifle_Audio;
-        }
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+			this.Weapon = TinaWeapons.Rifle;
+		}
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             TinaSoundService.RandomSound(TinaKeyWords.V_TinaShoot, 6, this);
         }
     }

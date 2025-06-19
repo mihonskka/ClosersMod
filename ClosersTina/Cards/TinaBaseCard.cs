@@ -32,8 +32,13 @@ namespace ClosersTina.Cards
         public float AudioForeSecond { get; set; } = 0f;
         public float ComboGapSecond { get; set; } = 0.1f;
         public string AudioName { get; set; }
+		public bool isSwitching { get; set; } = false;
+        public float SwitchingTime { get; set; } = 0.5f; // 切换武器的时间
+		public TinaWeapons Weapon { get; set; } = TinaWeapons.NoneOrOther;
+        public Action AfterComboAction { get; set; } = null;
+        public float AfterComboActionDelay { get; set; } = 0.5f;
 
-        public BattleChar ComponentMaster => this.BChar;
+		public BattleChar ComponentMaster => this.BChar;
 
         public Vector3 ComponentCoordinate => new Vector3();
 
@@ -90,9 +95,19 @@ namespace ClosersTina.Cards
             */
         }
 
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		public override string UseSubParticlepath()
+		{
+            if (isSwitching && this.MySkill.MySkill.SubParticle_Path.Count > 0 && !string.IsNullOrEmpty(this.MySkill.MySkill.SubParticle_Path[0])) return this.MySkill.MySkill.SubParticle_Path[0];
+			return base.UseSubParticlepath();
+		}
+
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            if (this.BChar?.BattleInfo?.EnemyList == null || this.BChar.BattleInfo.EnemyList.Count == 0) return;
+			isSwitching = TinaService.GetNowWeapon() != Weapon;
+            if (Weapon != TinaWeapons.Continue) TinaService.SwitchWeapon(Weapon);
+            if (isSwitching) AudioForeSecond = AudioForeSecond.Limit(SwitchingTime, DotNetExtend.LimitType.min);
+
+			if (this.BChar?.BattleInfo?.EnemyList == null || this.BChar.BattleInfo.EnemyList.Count == 0) return;
 
             if (!this.MySkill.PlusHit && this.HasMultiStage)
             {
@@ -133,11 +148,12 @@ namespace ClosersTina.Cards
                 NowStageDamage = ReminderDamage;
                 BattleSystem.DelayInput(this.Ienum(Targets, NowStageDamage + 1));
             }
+            if (AfterComboAction != null) BattleSystem.DelayInput(AfterComboAction.ToCorotine(AfterComboActionDelay));
 
             yield return null;
             yield break;
         }
-        public IEnumerator Ienum(List<BattleChar> Targets,int damage)
+        public IEnumerator Ienum(List<BattleChar> Targets, int damage)
         {
             if (ComboGapSecond > 0) yield return new WaitForSecondsRealtime(ComboGapSecond);
             else yield return new WaitForFixedUpdate();
@@ -151,14 +167,21 @@ namespace ClosersTina.Cards
             skill.FreeUse = true;
             skill.PlusHit = true;
             skill.NotCount = true;
+            var mydata = skill.AllExtendeds.FirstOrDefault(t => t is TinaBaseCard) as TinaBaseCard;
+			if (mydata != null && mydata.isSwitching)
+			{
+				mydata.isSwitching = false;
+				if (mydata.AudioForeSecond <= mydata.SwitchingTime) mydata.AudioForeSecond = 0;
+			}
 
-            skill.ExtendedAdd(skill_Extended);
+			skill.ExtendedAdd(skill_Extended);
             if (Targets.Count == 0 || this.RandomTarget)
                 this.BChar.ParticleOut(this.MySkill, skill, this.BChar.BattleInfo.EnemyList.Random());
             else this.BChar.ParticleOut(this.MySkill, skill, Targets);
-            if (AudioForeSecond > 0) BattleSystem.instance.StartCoroutine(PlayAudioAsync());
-            else TinaAudioService.Play(AudioName, 3f);
-            yield break;
+			TinaAudioService.Play(AudioName, 3f);
+			//if (AudioForeSecond > 0) BattleSystem.instance.StartCoroutine(PlayAudioAsync());
+			//else TinaAudioService.Play(AudioName, 3f);
+			yield break;
         }
 
         public IEnumerator PlayAudioAsync()

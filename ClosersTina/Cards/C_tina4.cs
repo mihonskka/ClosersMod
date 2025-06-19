@@ -25,7 +25,8 @@ namespace ClosersTina.Cards
         {
             this.AudioForeSecond = 1f;
             this.AudioName = TinaKeyWords.Closers_Tina_Snipe_Audio;
-        }
+			this.Weapon = TinaWeapons.Snipe;
+		}
         
         #region 旧方案
         public class c4backup
@@ -40,8 +41,7 @@ namespace ClosersTina.Cards
         {
             base.Init();
         }
-
-        public void SkillCasting(CastingSkill ThisSkill)
+		public void SkillCasting(CastingSkill ThisSkill)
         {
             EventDispatcher.AddAction(TinaEventKeys.SniperInterference, _ =>
             {
@@ -78,7 +78,7 @@ namespace ClosersTina.Cards
         public List<Buff> TempArea = new List<Buff>();
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             //rollback
             /*this.Targets = Targets;
             if (BattleSystem.instance.AllyTeam.Skills_Deck.Count >= 0)

@@ -18,8 +18,13 @@ namespace ClosersTina.Cards
         public C_tina7() : base(true)
         {
             this.AudioName = TinaKeyWords.Closers_Tina_Pistol_Audio;
-        }
-        public override void SkillUseSingleAfter(Skill SkillD, List<BattleChar> Targets)
+			this.Weapon = TinaWeapons.Pistol;
+		}
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		{
+			base.SkillUseSingle(SkillD, Targets);
+		}
+		public override void SkillUseSingleAfter(Skill SkillD, List<BattleChar> Targets)
         {
             base.SkillUseSingleAfter(SkillD, Targets);
             BattleSystem.DelayInputAfter(ienum(Targets));
@@ -47,9 +52,9 @@ namespace ClosersTina.Cards
         public C_tina7_0() : base(false)
         {
             this.AudioName = TinaKeyWords.Closers_Tina_Pistol_Audio;
-        }
-
-        public override void SkillKill(SkillParticle SP)
+			this.Weapon = TinaWeapons.Pistol;
+		}
+		public override void SkillKill(SkillParticle SP)
         {
             base.SkillKill(SP);
             Skill skill = new Skill();
@@ -70,7 +75,7 @@ namespace ClosersTina.Cards
         }
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             TinaSoundService.RandomSound(TinaKeyWords.V_TinaPistol, 4, this);
         }
     }

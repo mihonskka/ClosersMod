@@ -230,5 +230,15 @@ namespace ClosersTina.KeyWords
         public const string Closers_Tina_MachineGun_Audio = nameof(Closers_Tina_MachineGun_Audio);
         public const string Closers_Tina_MachineGun5Combo_Audio = nameof(Closers_Tina_MachineGun5Combo_Audio);
         public const string Closers_Tina_Shotgun_Audio = nameof(Closers_Tina_Shotgun_Audio);
-    }
+
+		public const string Closers_Tina_RifleSwitch_Audio = nameof(Closers_Tina_RifleSwitch_Audio);
+        public const string Closers_Tina_PistolSwitch_Audio = nameof(Closers_Tina_PistolSwitch_Audio);
+		public const string Closers_Tina_SnipeSwitch_Audio = nameof(Closers_Tina_SnipeSwitch_Audio);
+		public const string Closers_Tina_SubmachineGunSwitch_Audio = nameof(Closers_Tina_SubmachineGunSwitch_Audio);
+		public const string Closers_Tina_MachineGunSwitch_Audio = nameof(Closers_Tina_MachineGunSwitch_Audio);
+		public const string Closers_Tina_ShotgunSwitch_Audio = nameof(Closers_Tina_ShotgunSwitch_Audio);
+		public const string Closers_Tina_ItemSwitch_Audio = nameof(Closers_Tina_ItemSwitch_Audio);
+
+		public const string Closers_Tina_SubmachineGunReload_Audio = nameof(Closers_Tina_SubmachineGunReload_Audio);
+	}
 }

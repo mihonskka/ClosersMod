@@ -1,4 +1,5 @@
-﻿using ClosersTina.Cards;
+﻿using ClosersFramework.Services;
+using ClosersTina.Cards;
 using ClosersTina.KeyWords;
 using ClosersTina.Services;
 using System;
@@ -15,16 +16,18 @@ namespace ClosersTina.Cards
         {
             base.Init();
             this.OnePassive = true;
+            clog.tw($"CT8: MyParticle Path: {this.MySkill.MySkill.Particle_Path}");
         }
 
         public C_tina8():base(false)
         {
             this.AudioName = TinaKeyWords.Closers_Tina_Shotgun_Audio;
-        }
+			this.Weapon = TinaWeapons.Shotgun;
+		}
 
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             TinaSoundService.RandomSound(TinaKeyWords.V_TinaShotgun, 3, this);
         }
 

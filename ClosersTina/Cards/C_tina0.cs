@@ -14,7 +14,10 @@ namespace ClosersTina.Cards
 {
     public class C_tina0 : TinaBaseCard
     {
-        public C_tina0() : base(false) { }
+        public C_tina0() : base(false)
+        {
+            this.Weapon = TinaWeapons.Grenade;
+		}
         public override void Init()
         {
             base.Init();
@@ -24,9 +27,9 @@ namespace ClosersTina.Cards
         {
             return base.ClosersDesc(desc).Replace("&a",((int)(this.BChar.GetStat.atk*0.4)).ToString());
         }
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+		public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            base.SkillUseSingle(SkillD, Targets);
+			base.SkillUseSingle(SkillD, Targets);
             var target2 = BattleSystem.instance.EnemyTeam.AliveChars.Where(t => !Targets.Contains(t)).ToList();
             //clog.tw($"手榴弹-准备溅射0。目标数量：{target2.Count}");
             if(target2!=null && target2.Count>0)BattleSystem.DelayInput(this.Ienum0(target2));

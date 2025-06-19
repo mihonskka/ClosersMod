@@ -246,5 +246,12 @@ namespace ClosersFramework.Services
                 return default;
             }
         }
+        public static IEnumerator ToCorotine(this Action a, float DelayTime = 0)
+        {
+            if (DelayTime > 0) yield return new WaitForSeconds(DelayTime);
+			if (a == null) yield break;
+			a.Invoke();
+			yield return null;
+		}
     }
 }
