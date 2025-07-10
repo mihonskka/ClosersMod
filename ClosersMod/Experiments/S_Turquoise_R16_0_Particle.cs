@@ -10,22 +10,23 @@ using UnityEngine;
 
 namespace ClosersFramework.Experiments
 {
+    
     [Obsolete]
     public class S_Turquoise_R16_0_Particle// : CustomSkillGDE<ClosersModDefinition>
     {
-        /*public override ModGDEInfo.LoadingType GetLoadingType()
-        {
-            return ModGDEInfo.LoadingType.Replace;
-        }
+        //public override ModGDEInfo.LoadingType GetLoadingType()
+        //{
+        //    return ModGDEInfo.LoadingType.Replace;
+        //}
 
-        public override void SetValue()
-        {
-            Particle = assetInfo.CodeConstuctAsync<GameObject>("Particle/Priest/Priest_CutEffect", ParticleChangeDelegate);
-        }
-        public override string Key()
-        {
-            return "C_iseubi0";
-        }*/
+        //public override void SetValue()
+        //{
+        //    Particle = assetInfo.CodeConstuctAsync<GameObject>("Particle/Priest/Priest_CutEffect", ParticleChangeDelegate);
+        //}
+        //public override string Key()
+        //{
+        //    return "C_iseubi0";
+        //}
         public static void SpecialCGRemove(SkillParticle particle)
         {
             particle.SpacialCGMainCharacter.ForEach(g => GameObject.Destroy(g));

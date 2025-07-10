@@ -30,6 +30,7 @@ using System.Runtime.Serialization.Json;
 using ClosersFramework.Services;
 using System.Reflection;
 using ClosersFramework.Patchers;
+using ClosersDebugMode;
 
 namespace ClosersSolidarity
 {
@@ -131,11 +132,20 @@ namespace ClosersSolidarity
                 assembly.GetTypes().Where(t => t.IsSubclassOf(typeof(ClosersBaseCharacter))).ToList().ForEach(t => {
                     var obj = Activator.CreateInstance(t) as ClosersBaseCharacter;
                     clog.iw($"尝试加载角色{obj.ClosersCodeName}");
-                    obj.ClosersInit();
+                    try
+                    {
+						obj.ClosersInit();
+					}
+                    catch
+                    {
+						clog.iw($"加载角色{obj.ClosersCodeName}时出现了问题。");
+					}
+                    
                 });
             }
 			clog.iw($"尝试加载程序集{typeof(ClosersModDefinition).Assembly.FullName}");
 			this.harmony.PatchAll(typeof(ClosersModDefinition).Assembly);//ClosersSoliderity
+			
             new Startup().Configure();
 
             LoadReadyInterceptorsData.Data.Add(ProcessMessengerService.SyncCacheXML);

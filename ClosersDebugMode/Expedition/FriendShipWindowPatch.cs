@@ -1,6 +1,6 @@
-﻿using ClosersFramework.Services;
+﻿using ClosersFramework;
+using ClosersFramework.Services;
 using HarmonyLib;
-using Mono.Cecil;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +36,7 @@ namespace ClosersDebugMode.Expedition
 
 		public static IEnumerable<CodeInstruction> InitPost(IEnumerable<CodeInstruction> instructions, MethodBase original)
 		{
-			clog.iw("观察组报告：获取好感度窗口Init的IL语句！");
+			clog.iw($"观察组报告：获取好感度窗口Init的IL语句！");
 			var codes = instructions.ToList();
 
 			//29-33

@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Equipments\EmployeeCard.cs" />
+    <Compile Include="Equipments\E_EmployeeCard.cs" />
     <Compile Include="Equipments\LawDagger.cs" />
     <Compile Include="ItemPassive\BlackLambMascot.cs" />
     <Compile Include="ItemPassive\PDA.cs" />
@@ -69,9 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClosersMod\ClosersFramework.csproj">
-      <Project>{6044F461-A56C-46D9-8995-21FE343F3D95}</Project>
+      <Project>{6044f461-a56c-46d9-8995-21fe343f3d95}</Project>
       <Name>ClosersFramework</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

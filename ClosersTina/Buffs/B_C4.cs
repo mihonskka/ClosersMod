@@ -1,5 +1,7 @@
 ﻿using ClosersFramework.Services;
 using ClosersFramework.Templates;
+using ClosersTina.KeyWords;
+using ClosersTina.Services;
 using GameDataEditor;
 using System;
 using System.Collections;
@@ -13,8 +15,29 @@ namespace ClosersTina.Buffs
 {
     public class B_C4 : ClosersBaseBuff
     {
-        //todo
-        public override void SelfdestroyPlus()
+        public B_C4()
+        {
+			Id = Guid.NewGuid();
+		}
+        public Guid Id { get; set; }
+
+		public override void FixedUpdate()
+		{
+			base.FixedUpdate();
+            
+		}
+        public IEnumerator BlinkAsync()
+        {
+            yield return new WaitForSeconds(2.5f-1.2f);
+            while (BattleSystem.instance?.EnemyTeam.AliveChars.Select(t => t.Buffs).Any(t => t.Any(u => u is B_C4 && (u as B_C4).Id == this.Id)) ?? false)
+            {
+                yield return new WaitForSeconds(1.2f);
+                TinaAudioService.Play(TinaKeyWords.Closers_Tina_C4Blink_Audio);
+            }
+		}
+
+		//todo
+		public override void SelfdestroyPlus()
         {
             base.SelfdestroyPlus();
             BattleSystem.DelayInput(Damage((int)(this.Usestate_F.GetStat.atk * 1f * base.StackNum), this.BChar, true));
@@ -35,9 +58,10 @@ namespace ClosersTina.Buffs
             {
                 clog.tw("塑胶炸弹-准备播放特效");
                 AddressableLoadManager.Instantiate(new GDEGameobjectDatasData("C4Effect").Gameobject_Path, AddressableLoadManager.ManageType.Battle).transform.position = this.BChar.GetTopPos();
-                clog.tw("塑胶炸弹-特效播放完毕");
-            }
-            bc.Damage(base.Usestate_F, damage, false, false, false, 0, false, false, false);
+				yield return new WaitForSeconds(2.05f);
+			}
+            
+			bc.Damage(base.Usestate_F, damage, false, false, false, 0, false, false, false);
             clog.tw("塑胶炸弹-成功给予伤害");
             yield break;
         }
@@ -45,5 +69,11 @@ namespace ClosersTina.Buffs
         {
             return base.ClosersDesc(desc).Replace("&a", ((int)(this.Usestate_F.GetStat.atk * 1f * base.StackNum)).ToString()).Replace("&b", ((int)(this.Usestate_F.GetStat.atk * 0.4f * base.StackNum)).ToString());
         }
-    }
+		public override void BuffOneAwake()
+		{
+			base.BuffOneAwake();
+            TinaAudioService.Play(TinaKeyWords.Closers_Tina_C4Setting_Audio);
+            BattleSystem.instance.StartCoroutine(BlinkAsync());
+		}
+	}
 }

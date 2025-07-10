@@ -21,14 +21,19 @@ namespace ClosersTina.Buffs
         public override void Init()
         {
             base.Init();
-            this.PlusStat.PerfectDodge = true;
-            this.PlusStat.dod = 999;
-            this.PlusStat.RES_CC = 999;
-            this.PlusStat.RES_DEBUFF = 999;
-            this.PlusStat.RES_DOT = 999;
+            
         }
+		public override void BuffStat()
+		{
+			base.BuffStat();
+			this.PlusStat.PerfectDodge = true;
+			this.PlusStat.dod = 999;
+			this.PlusStat.RES_CC = 999;
+			this.PlusStat.RES_DEBUFF = 999;
+			this.PlusStat.RES_DOT = 999;
+		}
 
-        public override void DestroyByTurn()
+		public override void DestroyByTurn()
         {
             base.DestroyByTurn();
             if (dodgeSuccess) this.BChar.MyTeam.ForceDraw(this.BChar.MyTeam.Skills_UsedDeck.FirstOrDefault(t => t.MySkill.KeyID == TinaKeyWords.C_tina3) ?? this.BChar.MyTeam.Skills_Deck.FirstOrDefault(t => t.MySkill.KeyID == TinaKeyWords.C_tina3));

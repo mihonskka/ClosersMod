@@ -398,5 +398,14 @@ namespace ClosersIseubi.KeyWords
         /// 李瑟钰当前流派
         /// </summary>
         public const string iseubiSect = nameof(iseubiSect);
-    }
+		/// <summary>
+		/// UI-李瑟钰进度条
+		/// </summary>
+		public const string Closers_Sylvi_ProgressBar = nameof(Closers_Sylvi_ProgressBar);
+        /// <summary>
+        /// UI-进度条呈现动画-砂砾单元
+        /// </summary>
+		public const string Closers_Sylvi_SandUnit = nameof(Closers_Sylvi_SandUnit);
+
+	}
 }

@@ -26,15 +26,15 @@ namespace ClosersTina.Buffs
             return desc;
         }
 
-        TranslationItem descExt = new TranslationItem()
+        internal static TranslationItem descExt = new TranslationItem()
         {
             
             SimplifiedChinese = "每到偶数回合，过热量+1。",
             TraditionalChinese = "每到偶數回合，過熱量+1。",
-            English = "",
-            Japanese = "",
-            Korean = ""
-        };
+            English = "Add 1 Overheat each 2 turns.",
+            Japanese = "偶数ラウンドごとに、【熱い】+1。",
+            Korean = "짝수 라운드마다 【과열】+1."
+		};
 
         public void Turn1()
         {

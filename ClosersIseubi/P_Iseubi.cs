@@ -15,10 +15,14 @@ using ClosersFramework.Templates;
 using ChronoArkMod;
 using ClosersFramework.Data;
 using ToolBox = ClosersIseubi.Service.ToolBox;
+using ChronoArkMod.ModData;
+using ClosersIseubi.FrontScripts;
+using UnityEngine;
+using System.Xml.Serialization;
 
 namespace ClosersIseubi
 {
-    public class P_Iseubi : Passive_Char, IP_SpecialEnemyTargetSelect, IP_SkillUseHand_Team, IP_Discard, IP_SkillUse_User_After, IP_BattleStart_Ones, IP_BattleEnd, IP_TargetedAlly, IP_PlayerTurn_1, IP_Draw, IP_WaitButton, IP_DamageChange, IP_UsedDeckToDeck, IP_Dodge
+    public class P_Iseubi : Passive_Char, IP_SpecialEnemyTargetSelect, IP_SkillUseHand_Team, IP_Discard, IP_SkillUse_User_After, IP_BattleStart_Ones, IP_BattleEnd, IP_TargetedAlly, IP_PlayerTurn_1, IP_Draw, IP_WaitButton, IP_DamageChange, IP_UsedDeckToDeck, IP_Dodge, IP_BuffUpdate, IP_BuffRemove, IP_BuffAdd, IP_Dead, IP_ClosersRebirthInBattle_After
     {
         readonly ToolBox toolBox = new ToolBox();
         readonly Electrical EMF = new Electrical();
@@ -50,11 +54,23 @@ namespace ClosersIseubi
                 IseubiService.checkWarmHoleAbility(skill, this.BChar);
         }
 
+
+
         public void BattleStart(BattleSystem Ins)
         {
             if (Ins != null)
             {
-                Ins.AllyTeam.AliveChars.ForEach(t =>
+				var _ProgressBar = AddressableLoadManager.Instantiate(new GDEGameobjectDatasData(IseubiKeyWords.Closers_Sylvi_ProgressBar).Gameobject_Path, AddressableLoadManager.ManageType.Character);
+				_ProgressBar.transform.SetParent(this.BChar.transform, false);
+                _ProgressBar.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                _ProgressBar.transform.position += new Vector3(0.05f * 22, 0.1f * 12, 0);
+				ProgressBar = _ProgressBar.AddComponent<ProgressBar_Sylvi_Script>();
+				//_ProgressBar.AddComponent<SandAnimation>();
+				ProgressBar.ChangeNumber(IseubiService.GetChipNum());
+
+
+
+				Ins.AllyTeam.AliveChars.ForEach(t =>
                 {
                     if (t != this.BChar)
                         t.BuffAdd(IseubiKeyWords.bipb, this.BChar);
@@ -99,7 +115,9 @@ namespace ClosersIseubi
                 */
             }
         }
-        public override void Init()
+		[XmlIgnore]
+		public ProgressBar_Sylvi_Script ProgressBar { get; set; }
+		public override void Init()
         {
             base.Init();
             this.OnePassive = true;
@@ -248,6 +266,56 @@ namespace ClosersIseubi
             }
         }
         void LV5Check() => this.PlusPerStat.Damage = 2 * DodgeCount;
-        public int DodgeCount { get; set; }
+
+        public void BuffUpdate(Buff MyBuff)
+        {
+            if (MyBuff.BuffData.Key == IseubiKeyWords.bc)
+            {
+                if (ProgressBar != null)
+                {
+                    ProgressBar.ChangeNumber(IseubiService.GetChipNum(), IseubiService.GetChipBuff());
+                }
+            }
+        }
+
+        public void BuffRemove(BattleChar buffMaster, Buff buff)
+        {
+            if (buff.BuffData.Key == IseubiKeyWords.bc && buffMaster == this.BChar)
+            {
+                if (ProgressBar != null)
+                {
+					ProgressBar.ChangeNumber(IseubiService.GetChipNum(), IseubiService.GetChipBuff());
+				}
+            }
+        }
+
+        public void Buffadded(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff)
+        {
+            if (addedbuff.BuffData.Key == IseubiKeyWords.bc)
+            {
+                if (ProgressBar != null)
+                {
+					ProgressBar.ChangeNumber(IseubiService.GetChipNum(), IseubiService.GetChipBuff());
+				}
+            }
+        }
+
+		public void Dead()
+		{
+			if (ProgressBar != null)
+			{
+                ProgressBar.Hide();
+			}
+		}
+
+		public void OnRebirthInBattleAfter(BattleChar c, double healHP = 0.5)
+		{
+			if (ProgressBar != null)
+			{
+				ProgressBar.Show();
+			}
+		}
+
+		public int DodgeCount { get; set; }
     }
 }

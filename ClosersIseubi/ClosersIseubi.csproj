@@ -87,6 +87,9 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AudioModule">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
       <Private>False</Private>
@@ -98,6 +101,16 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
@@ -157,6 +170,8 @@
     <Compile Include="Extendeds\CEn_iseubi3.cs" />
     <Compile Include="Extendeds\SignExtendeds\CS_iseubi0.cs" />
     <Compile Include="Extendeds\SignExtendeds\CS_iseubiPlusHit.cs" />
+    <Compile Include="FrontScripts\ProgressBar_Sylvi_Script.cs" />
+    <Compile Include="FrontScripts\SandAnimation.cs" />
     <Compile Include="IseubiCharacter.cs" />
     <Compile Include="Isouryoku\BLL\ElectricalBLL.cs" />
     <Compile Include="Isouryoku\BLL\GravityBLL.cs" />
@@ -178,6 +193,7 @@
     <Compile Include="Models\AuthorityConfigItem.cs" />
     <Compile Include="Models\PassiveDescItem.cs" />
     <Compile Include="Patchers\BattleInterceptor.cs" />
+    <Compile Include="Patchers\PartyWindowInitInterceptor.cs" />
     <Compile Include="Patchers\Registration\IseubiBroadcast.cs" />
     <Compile Include="Patchers\CampHireInterceptor.cs" />
     <Compile Include="Patchers\EncyclopediaInterceptor.cs" />

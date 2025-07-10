@@ -253,5 +253,12 @@ namespace ClosersFramework.Services
 			a.Invoke();
 			yield return null;
 		}
+
+        public static T Random<T>(this IEnumerable<T> a)
+        {
+			if (a == null || !a.Any()) return default;
+			var list = a.ToList();
+			return list[new Random().Next(list.Count)];
+		}
     }
 }

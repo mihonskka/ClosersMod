@@ -46,28 +46,52 @@ namespace ClosersTina
             StatInterceptorData.DodgePrivilegesList.Add(c => BattleSystem.instance != null && (BattleSystem.instance?.AllyTeam?.Chars?.Where(t => t?.Buffs.Any(u => u.BuffData.Key == TinaKeyWords.B_SpaceDodge) ?? false)?.Select(t => t?.Info)?.ToList().Contains(c) ?? false));
             CharacterInterceptorData.PassivePrivilegesList.Add(c => c?.KeyData == TinaKeyWords.Tina);
             BattleTextInterceptorData.Broadcasts.Add(new TinaBroadcast());
-            SkillAddingInterceptorData.SkillPrivilegesList.Add(TinaKeyWords.Tina, (t, c) => c || t.KeyData == TinaKeyWords.Tina);
-            ExpPassvieDescInterceptorData.lst.Add(new TinaPassiveDescCheck());
-            ClosersExtendText.RebirthInBattleText.Add(TinaKeyWords.Tina, new List<TranslationItem>()
+            try
             {
-                new TranslationItem(){
-                    Id=0,
-                    SimplifiedChinese="这里是缇娜，作战重新开始。",
-                    TraditionalChinese="這裡是緹娜，作戰重新開始。",
-                    English="This is Tina, battle restarting.",
-                    Japanese="こちらTina、作戦を再開する",
-                    Korean=""
-                },
-                new TranslationItem(){
-                    Id=1,
-                    SimplifiedChinese="自爆序列取消，战斗重新开始。",
-                    TraditionalChinese="自爆序列取消，作戰重新開始。",
-                    English="Self explosion sequence has been cancelled, battle restarting.",
-                    Japanese="自爆sequence cancelled、作戦を再開する",
-                    Korean=""
-                }
-            });
-            TalkingData.QStandingData.Add(TinaKeyWords.Tina, new QStandingInfo() { ArkPosition = new Vector3(7.2759f,3.1412f, 0), QStandingKey = TinaTalkingKeyWords.QStandingKey });
+				SkillAddingInterceptorData.SkillPrivilegesList.Add(TinaKeyWords.Tina, (t, c) => c || t.KeyData == TinaKeyWords.Tina);
+			}
+            catch
+            {
+
+            }
+            
+            ExpPassvieDescInterceptorData.lst.Add(new TinaPassiveDescCheck());
+            try
+            {
+				ClosersExtendText.RebirthInBattleText.Add(TinaKeyWords.Tina, new List<TranslationItem>()
+			    {
+				    new TranslationItem(){
+					    Id=0,
+					    SimplifiedChinese="这里是缇娜，作战重新开始。",
+					    TraditionalChinese="這裡是緹娜，作戰重新開始。",
+					    English="This is Tina, battle restarting.",
+					    Japanese="こちらTina、作戦を再開する",
+					    Korean=""
+				    },
+				    new TranslationItem(){
+					    Id=1,
+					    SimplifiedChinese="自爆序列取消，战斗重新开始。",
+					    TraditionalChinese="自爆序列取消，作戰重新開始。",
+					    English="Self explosion sequence has been cancelled, battle control reconnecting.",
+					    Japanese="自爆sequence cancelled、作戦を再開する",
+					    Korean=""
+				    }
+			    });
+			}
+            catch
+            {
+
+            }
+            
+            try
+            {
+				TalkingData.QStandingData.Add(TinaKeyWords.Tina, new QStandingInfo() { ArkPosition = new Vector3(7.2759f, 3.1412f, 0), QStandingKey = TinaTalkingKeyWords.QStandingKey });
+			}
+            catch
+            {
+
+            }
+            
             CharacterLoadedData.Data.Add(TinaKeyWords.Tina);
             TalkingData.Data.Add(new ArkTalkingA());
             TalkingData.Data.Add(new ForeKingA());

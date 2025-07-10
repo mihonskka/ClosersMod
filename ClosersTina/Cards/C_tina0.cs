@@ -17,6 +17,7 @@ namespace ClosersTina.Cards
         public C_tina0() : base(false)
         {
             this.Weapon = TinaWeapons.Grenade;
+			this.AudioName = TinaKeyWords.Closers_Tina_Grenade_Audio;
 		}
         public override void Init()
         {

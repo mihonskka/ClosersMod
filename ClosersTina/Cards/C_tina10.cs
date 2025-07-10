@@ -2,6 +2,7 @@
 using ClosersTina.KeyWords;
 using ClosersTina.Services;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,16 +30,21 @@ namespace ClosersTina.Cards
 			TinaService.SwitchWeapon(TinaWeapons.NoneOrOther);
 			base.SkillUseSingle(SkillD, Targets);
 		}
-		public override void Init()
+        public override void Init()
         {
             base.Init();
-            if (BattleSystem.instance != null && this.MySkill.IsCreatedInBattle && this.MySkill.AllExtendeds.All(t => t.Data.Key != TinaKeyWords.Ex_tina10))
-            {
-                this.MySkill.ExtendedAdd(TinaKeyWords.Ex_tina10);
-                this.APChange = -1;
-            }   
+            
         }
-    }
+		public override IEnumerator DrawAction()
+		{
+			if (BattleSystem.instance != null && this.MySkill.IsCreatedInBattle && this.MySkill.AllExtendeds.All(t => t?.Data?.Key != TinaKeyWords.Ex_tina10))
+			{
+				this.MySkill.ExtendedAdd(TinaKeyWords.Ex_tina10);
+				this.APChange = -1;
+			}
+			return base.DrawAction();
+		}
+	}
 }
 namespace ClosersTina.Extendeds
 {

@@ -72,6 +72,10 @@
     <Compile Include="TempCharacter\IseubiCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClosersDebugMode\ClosersDebugMode.csproj">
+      <Project>{b1fb06f3-e25c-4334-bd81-96dc4cdfc369}</Project>
+      <Name>ClosersDebugMode</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClosersHumanity\ClosersHumanity.csproj">
       <Project>{84FFCF1C-D4EF-48C5-BCC7-F118EB1EB3B5}</Project>
       <Name>ClosersHumanity</Name>

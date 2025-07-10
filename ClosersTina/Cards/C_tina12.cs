@@ -14,7 +14,10 @@ namespace ClosersTina.Cards
 {
     public class C_tina12:TinaBaseCard
     {
-        public C_tina12() : base(false,10) { }
+        public C_tina12() : base(false,10)
+        {
+            this.AudioName = TinaKeyWords.Closers_Tina_Rocket_Audio;
+		}
 
         public override void Init()
         {

@@ -8,6 +8,7 @@ using ClosersFramework.Service.CodeManager;
 using ClosersTina.KeyWords;
 using GameDataEditor;
 using ClosersTina.Services;
+using System.Xml.Serialization;
 
 namespace ClosersTina.Cards
 {
@@ -47,9 +48,13 @@ namespace ClosersTina.Cards
             */
         }
 
+        [XmlIgnore]
+        static string SelectName = "";
+
         [AccidentProne]
         public void Del(SkillButton Mybutton)
         {
+            clog.tw("c11-del");
             var target = Mybutton.Myskill.Master;
 
             if(target.IsDead)

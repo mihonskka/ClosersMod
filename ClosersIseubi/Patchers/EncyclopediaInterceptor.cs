@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClosersFramework;
 
 namespace ClosersIseubi.Patchers
 {
@@ -163,8 +164,11 @@ namespace ClosersIseubi.Patchers
         [HarmonyPrefix]
         public static void Prefix(ref CharSelectMainUIV2 __instance)
         {
-            clog.iw("检测到开启图鉴CB，修正李瑟钰的被动能力描述！");
-            var iseubi = __instance.CharDatas.FirstOrDefault(t => t.Key == IseubiKeyWords.Iseubi);
+			var a = GlobalSetting.Allin;
+			clog.iw($"检测到开启图鉴CB，修正李瑟钰的被动能力描述！{a}");
+            
+
+			var iseubi = __instance.CharDatas.FirstOrDefault(t => t.Key == IseubiKeyWords.Iseubi);
             if (iseubi != null) iseubi.PassiveDes = iseubi?.PassiveDes.Signal2Real();
         }
     }

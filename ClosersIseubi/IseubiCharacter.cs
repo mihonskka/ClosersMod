@@ -150,6 +150,7 @@ namespace ClosersIseubi
                 GDEItemKeys.SkillExtended_Outlaw_Ex,//靶子射击：释放露西技能时，手中最上面一个技能的主人受到&a点伤害。
                 GDEItemKeys.SkillExtended_PharosHealer_Ex_0,//法洛斯-行动干扰魔法：附带倒计时，锁定
                 GDEItemKeys.SkillExtended_S4_King_Ex_0,//被遗忘的王-鲁莽的行动：主动释放该技能时，被遗忘的王的攻击力增加 10%，此后该技能被放逐。
+                GDEItemKeys.SkillExtended_DeepWound_Ex,//深度创伤：主动释放该技能时，手中最上面一个技能的主人受到&a点伤害。
             };
 
 

@@ -10,29 +10,54 @@ using UnityEngine;
 
 namespace ClosersFramework.Services
 {
-    public static class ClosersService
+    public interface IP_ClosersRebirthInBattle
+    {
+        void OnRebirthInBattle(BattleChar c, double healHP = 0.5);
+	}
+	public interface IP_ClosersRebirthInBattle_After
+	{
+		void OnRebirthInBattleAfter(BattleChar c, double healHP = 0.5);
+	}
+
+	public static class ClosersService
     {
         public static void Rebirth(BattleChar c,double healHP = 0.5)
         {
-            var MyBT = new BattleText();
-            if (BattleSystem.instance != null)
-            {
-                c.Info.Hp = (int)(c.Info.get_stat.maxhp * healHP);
-                c.Recovery = c.Info.Hp;
-                c.IsDead = false;
-                BattleSystem.instance.AllyTeam.Skills_Deck.AddRange(c.Skills.Select(u => u.CloneSkill(false, null, u.AllExtendeds, false)));
+            clog.w("rebirth-c:" + c.Info.KeyData);
+            
+   //         if (BattleSystem.instance != null)
+   //         {
+				
+			//}
+			//BattleSystem.instance.IReturn<IP_ClosersRebirthInBattle>().ForEach(t => t.OnRebirthInBattle(c, healHP));
 
-                MyBT = BattleText.CustomText(c.GetTopPos(), ClosersExtendText.RebirthInBattleText[c.Info.KeyData].NextRandom().TransToLocalization);
-            }
+			c.IsDead = false;
+			clog.w("rebirth-c33");
+			c.Info.Incapacitated = false;
+			clog.w("rebirth-c35");
+			c.Info.Hp = (int)(c.Info.get_stat.maxhp * healHP);
+			clog.w("rebirth-c37");
+			c.Recovery = c.Info.Hp;
+			clog.w("rebirth-c39");
+			c.IsDead = false;
+			clog.w("rebirth-c41");
+			c.Info.Incapacitated = false;
+			clog.w("rebirth-c43");
+			BattleSystem.instance.AllyTeam.Skills_Deck.AddRange(c.Skills.Select(u => u.CloneSkill(false, null, u.AllExtendeds, false)));
 
-            if (MyBT != null)
+			var MyBT = new BattleText();
+			MyBT = BattleText.CustomText(c.GetTopPos(), ClosersExtendText.RebirthInBattleText[c.Info.KeyData].NextRandom().TransToLocalization);
+
+			
+			if (MyBT != null)
             {
                 BattleSystem.instance.StartCoroutine(new IEnumToolBoxForClosersService().RebirthTextClose(MyBT));
             }
+			//BattleSystem.instance.IReturn<IP_ClosersRebirthInBattle_After>().ForEach(t => t.OnRebirthInBattleAfter(c, healHP));
 
-        }
+		}
 
-        public static void RefreshBasicSkill(BattleChar bchar,Skill skill)
+		public static void RefreshBasicSkill(BattleChar bchar,Skill skill)
         {
             if ((bchar as BattleAlly).MyBasicSkill.buttonData == null || (bchar as BattleAlly).MyBasicSkill.ThisSkillUse)
             {

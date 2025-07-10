@@ -167,8 +167,7 @@ namespace ClosersTina.Cards
             skill.FreeUse = true;
             skill.PlusHit = true;
             skill.NotCount = true;
-            var mydata = skill.AllExtendeds.FirstOrDefault(t => t is TinaBaseCard) as TinaBaseCard;
-			if (mydata != null && mydata.isSwitching)
+			if (skill.AllExtendeds.FirstOrDefault(t => t is TinaBaseCard) is TinaBaseCard mydata && mydata.isSwitching)
 			{
 				mydata.isSwitching = false;
 				if (mydata.AudioForeSecond <= mydata.SwitchingTime) mydata.AudioForeSecond = 0;

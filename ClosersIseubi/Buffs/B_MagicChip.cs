@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClosersIseubi.Buffs
 {
-    public class B_MagicChip : ClosersBaseBuff
-    {
-    }
+	public class B_MagicChip : ClosersBaseBuff
+	{
+	}
 }

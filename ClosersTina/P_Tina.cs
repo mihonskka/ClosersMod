@@ -17,10 +17,12 @@ using static System.Net.Mime.MediaTypeNames;
 using Random = System.Random;
 using EItem;
 using System.Windows.Markup;
+using ClosersTina.FrontScript;
+using System.Xml.Serialization;
 
 namespace ClosersTina
 {
-    public class P_Tina : Passive_Char, IP_SkillUse_Team_Target, IP_DamageChange, IP_SkillUse_User_After, IP_SkillUseHand_Team, IP_BattleStart_Ones, IP_PlayerTurn_1, IP_TurnEnd, IP_BuffAddAfter, IP_BattleEnd, IP_StageStart, IP_PlayerTurn
+    public class P_Tina : Passive_Char, IP_SkillUse_Team_Target, IP_DamageChange, IP_SkillUse_User_After, IP_SkillUseHand_Team, IP_BattleStart_Ones, IP_PlayerTurn_1, IP_TurnEnd, IP_BuffAddAfter, IP_BattleEnd, IP_StageStart, IP_PlayerTurn,IP_Dead, IP_ClosersRebirthInBattle_After//,IP_Draw
     {
         int passiveCounter;
 
@@ -210,6 +212,7 @@ namespace ClosersTina
                     }
                     EffectView.SimpleTextout(this.BChar.transform, tips.TransToLocalization, 1f, false, 1f);
                 }
+                ProgressBar.SetSupply(value);
             }
         }
         public int SupplyThreshold0 { get; set; } = 18;
@@ -237,8 +240,9 @@ namespace ClosersTina
         {
 
             var exp = (int)ExpService.getExp().Obj;
+            Buff AbrasionBuff = null;
             for (int i = 0; i < exp; i++)
-                this.BChar.BuffAdd(TinaKeyWords.B_Abrasion, this.BChar);
+                AbrasionBuff = this.BChar.BuffAdd(TinaKeyWords.B_Abrasion, this.BChar);
 
             if (this.BChar.MyTeam.ALLSKILLLIST.Any(t => t.MySkill.KeyID != TinaKeyWords.CL_tina1 && t.Master == this.BChar && t.MySkill.Rare))
             {
@@ -247,10 +251,18 @@ namespace ClosersTina
                 this.BChar.MyTeam.Skills_Deck.RemoveAll(t => t.MySkill.KeyID == TinaKeyWords.CL_tina1);
                 PlayData.TSavedata.LucySkills.RemoveAll(t => t == TinaKeyWords.CL_tina1);
             }
+			var _ProgressBar = AddressableLoadManager.Instantiate(new GDEGameobjectDatasData(TinaKeyWords.Closers_Tina_ProgressBar).Gameobject_Path, AddressableLoadManager.ManageType.Character);
+			_ProgressBar.transform.SetParent(this.BChar.transform, false);
+            _ProgressBar.transform.position += new Vector3(0.1f * 15, 0.1f * 15, 0);
+            _ProgressBar.transform.localScale = new Vector3(0.5f, 0.5f, 0);
+			ProgressBar = _ProgressBar.AddComponent<ProgressBar_Tina_Script>();
+            ProgressBar.SetAbrasion(exp, AbrasionBuff);
+            ProgressBar.SetSupply(PassiveCounter, true);
+		}
+        [XmlIgnore]
+		public ProgressBar_Tina_Script ProgressBar { get; set; }
 
-        }
-
-        public void Turn1()
+		public void Turn1()
         {
 
         }
@@ -346,7 +358,30 @@ namespace ClosersTina
                 }
             }
         }
-        TinaWeapons _nowWeapon = TinaWeapons.NoneOrOther;
+
+		public void Dead()
+		{
+            if (BattleSystem.instance != null) ProgressBar.gameObject.SetActive(false);
+            else TinaService.FieldTinaPB.gameObject.SetActive(false);
+		}
+
+		public void OnRebirthInBattleAfter(BattleChar c, double healHP = 0.5)
+		{
+			if (BattleSystem.instance != null) ProgressBar.gameObject.SetActive(true);
+			else TinaService.FieldTinaPB.gameObject.SetActive(true);
+		}
+
+		//public IEnumerator Draw(Skill Drawskill, bool NotDraw)
+		//{
+		//	if (Drawskill.IsCreatedInBattle && Drawskill.ExtendedFind(TinaKeyWords.Ex_tina10, true) == null && Drawskill.MySkill.KeyID == TinaKeyWords.C_tina10)
+		//	{
+		//		Drawskill.ExtendedAdd(Skill_Extended.DataToExtended(TinaKeyWords.Ex_tina10));
+		//	}
+		//	yield return null;
+		//	yield break;
+		//}
+
+		TinaWeapons _nowWeapon = TinaWeapons.NoneOrOther;
         public TinaWeapons NowWeapon { get => _nowWeapon; set
             {
                 if (_nowWeapon != value)

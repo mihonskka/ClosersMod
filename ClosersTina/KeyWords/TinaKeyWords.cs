@@ -168,6 +168,10 @@ namespace ClosersTina.KeyWords
         /// </summary>
         public const string C_tina12_0 = nameof(C_tina12_0);
         /// <summary>
+        /// 缇娜-默认射击
+        /// </summary>
+        public const string C_tina_Shoot = nameof(C_tina_Shoot);
+        /// <summary>
         /// 缇娜-reloading
         /// </summary>
         public const string CL_tina0 = nameof(CL_tina0);
@@ -230,6 +234,7 @@ namespace ClosersTina.KeyWords
         public const string Closers_Tina_MachineGun_Audio = nameof(Closers_Tina_MachineGun_Audio);
         public const string Closers_Tina_MachineGun5Combo_Audio = nameof(Closers_Tina_MachineGun5Combo_Audio);
         public const string Closers_Tina_Shotgun_Audio = nameof(Closers_Tina_Shotgun_Audio);
+        public const string Closers_Tina_Grenade_Audio = nameof(Closers_Tina_Grenade_Audio);
 
 		public const string Closers_Tina_RifleSwitch_Audio = nameof(Closers_Tina_RifleSwitch_Audio);
         public const string Closers_Tina_PistolSwitch_Audio = nameof(Closers_Tina_PistolSwitch_Audio);
@@ -240,5 +245,15 @@ namespace ClosersTina.KeyWords
 		public const string Closers_Tina_ItemSwitch_Audio = nameof(Closers_Tina_ItemSwitch_Audio);
 
 		public const string Closers_Tina_SubmachineGunReload_Audio = nameof(Closers_Tina_SubmachineGunReload_Audio);
+
+		public const string Closers_Tina_C4Setting_Audio = nameof(Closers_Tina_C4Setting_Audio);
+		public const string Closers_Tina_C4Blink_Audio = nameof(Closers_Tina_C4Blink_Audio);
+
+		public const string Closers_Tina_Rocket_Audio = nameof(Closers_Tina_Rocket_Audio);
+
+        /// <summary>
+        /// 缇娜面板UI
+        /// </summary>
+		public const string Closers_Tina_ProgressBar = nameof(Closers_Tina_ProgressBar);
 	}
 }

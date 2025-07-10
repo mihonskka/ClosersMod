@@ -60,6 +60,11 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>False</Private>
@@ -78,6 +83,20 @@
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Chrono Ark\ChronoArk_Data\Managed\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
@@ -118,15 +137,21 @@
     <Compile Include="Cards\C_tina7.cs" />
     <Compile Include="Cards\C_tina8.cs" />
     <Compile Include="Cards\C_tina9.cs" />
+    <Compile Include="Cards\C_tina_Shoot.cs" />
     <Compile Include="Cards\TinaBaseCard.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Data\BuffStagingArea.cs" />
+    <Compile Include="Extendeds\CEn_tina1.cs" />
+    <Compile Include="Extendeds\CEn_tina2.cs" />
+    <Compile Include="Extendeds\CEn_tina0.cs" />
+    <Compile Include="FrontScript\ProgressBar_Tina_Script.cs" />
     <Compile Include="KeyWords\ThrottleKeyWords.cs" />
     <Compile Include="KeyWords\TinaEventKeys.cs" />
     <Compile Include="KeyWords\TinaKeyWords.cs" />
     <Compile Include="Models\BuffStagingUnit.cs" />
     <Compile Include="Models\ClosersRegistBuff.cs" />
     <Compile Include="Patcher\CampHireInterceptors.cs" />
+    <Compile Include="Patcher\PartyWindowInitInterceptor.cs" />
     <Compile Include="Patcher\Registration\TinaPassiveDescCheck.cs" />
     <Compile Include="Patcher\StageReadyInitInterceptor.cs" />
     <Compile Include="Patcher\LevelInterceptors.cs" />
@@ -148,23 +173,21 @@
     <Compile Include="Talking\ForeKingA.cs" />
     <Compile Include="TinaCharacter.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Extendeds\" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClosersHumanity\ClosersHumanity.csproj">
-      <Project>{84FFCF1C-D4EF-48C5-BCC7-F118EB1EB3B5}</Project>
+      <Project>{84ffcf1c-d4ef-48c5-bcc7-f118eb1eb3b5}</Project>
       <Name>ClosersHumanity</Name>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\ClosersMod\ClosersFramework.csproj">
-      <Project>{6044F461-A56C-46D9-8995-21FE343F3D95}</Project>
+      <Project>{6044f461-a56c-46d9-8995-21fe343f3d95}</Project>
       <Name>ClosersFramework</Name>
       <Private>False</Private>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

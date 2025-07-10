@@ -1,6 +1,4 @@
-﻿using ClosersFramework.Services;
-using ClosersFramework;
-using GameDataEditor;
+﻿using GameDataEditor;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
@@ -10,6 +8,7 @@ using System.Threading.Tasks;
 using ClosersTina.KeyWords;
 using System.Collections;
 using UnityEngine;
+using ClosersFramework;
 
 namespace ClosersTina.Patcher
 {

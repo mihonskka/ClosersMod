@@ -29,6 +29,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosersHumanity", "ClosersHumanity\ClosersHumanity.csproj", "{84FFCF1C-D4EF-48C5-BCC7-F118EB1EB3B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosersDebugMode", "ClosersDebugMode\ClosersDebugMode.csproj", "{B1FB06F3-E25C-4334-BD81-96DC4CDFC369}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6044F461-A56C-46D9-8995-21FE343F3D95} = {6044F461-A56C-46D9-8995-21FE343F3D95}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosersArtist", "ClosersArtist\ClosersArtist.csproj", "{711267B9-1235-4AA9-95B0-98DEE3DA1316}"
 EndProject

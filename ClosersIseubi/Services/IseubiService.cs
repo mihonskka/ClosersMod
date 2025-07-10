@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClosersIseubi.FrontScripts;
 
 namespace ClosersIseubi.Service
 {
@@ -67,9 +68,13 @@ namespace ClosersIseubi.Service
             return null;
         }
 
-        public static int GetChipNum() => GetChipNum(FindIseubiInBattle());
-        public static int GetChipNum(BattleChar bc) => bc?.Buffs?.FirstOrDefault(t => t.BuffData.Key == IseubiKeyWords.bc)?.StackNum ?? 0;
-        public static bool addChip(int a, BattleChar bc) => addChip(a, FindIseubiInBattle(), bc);
+        public static int GetChipNum() => BattleSystem.instance != null ? GetChipNum(FindIseubiInBattle()) : GetChipNum(FindIseubiInInvest());
+		public static int GetChipNum(BattleChar bc) => GetChipBuff(bc)?.StackNum ?? 0;
+        public static int GetChipNum(Character c) => GetChipBuff(c)?.StackNum ?? 0;
+        public static Buff GetChipBuff() => BattleSystem.instance != null ? GetChipBuff(FindIseubiInBattle()) : GetChipBuff(FindIseubiInInvest());
+        public static Buff GetChipBuff(BattleChar bc) => bc?.BuffReturn(IseubiKeyWords.bc);
+		public static Buff GetChipBuff(Character c) => c?.Buffs_Field?.FirstOrDefault(t => t.BuffData.Key == IseubiKeyWords.bc);
+		public static bool addChip(int a, BattleChar bc) => addChip(a, FindIseubiInBattle(), bc);
         public static bool addChip(int a, BattleChar iseubi, BattleChar bc)
         {
             try
@@ -240,5 +245,10 @@ namespace ClosersIseubi.Service
             }
             return cont;
         }
+        /// <summary>
+        /// 李瑟钰碎片进度条UI - 探索阶段
+        /// </summary>
+        public static ProgressBar_Sylvi_Script FieldSylviPB { get; set; }
+        public static P_Iseubi P_Iseubi => (BattleSystem.instance?.AllyList.FirstOrDefault(t => t.Info.KeyData == IseubiKeyWords.Iseubi)?.Info.Passive ?? FieldSystem.instance?.PartyWindow.FirstOrDefault(t => t.Info.KeyData == IseubiKeyWords.Iseubi)?.Info.Passive) as P_Iseubi;
     }
 }
