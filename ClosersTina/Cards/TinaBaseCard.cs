@@ -111,7 +111,7 @@ namespace ClosersTina.Cards
 
             if (!this.MySkill.PlusHit && this.HasMultiStage)
             {
-                clog.tw("本轮攻击将会触发连击");
+                //clog.tw("本轮攻击将会触发连击");
                 BattleSystem.DelayInput(this.Useeffect2(Targets));
             }
             if (AudioForeSecond > 0) BattleSystem.instance.StartCoroutine(PlayAudioAsync());
@@ -122,7 +122,7 @@ namespace ClosersTina.Cards
 
         public IEnumerator Useeffect2(List<BattleChar> Targets)
         {
-            clog.tw("进入UF2");
+            //clog.tw("进入UF2");
             this.OriginalDamage = (int)this.MySkill?.TargetDamageView;
 
             NowStageDamage = (int)(this.BChar.GetStat.atk * 0.01 * DamageThreshold);
@@ -131,7 +131,7 @@ namespace ClosersTina.Cards
             clog.tw($"UF2: OriginalDamage:{OriginalDamage}, TotalStage:{TotalStage}, NowStageDamage:{NowStageDamage}");
             for (var i = 1; i < TotalStage; i++)
             {
-                clog.tw("进入UF2循环");
+                //clog.tw("进入UF2循环");
                 this.NowStage = i;
                 
                 if(ReminderDamage<=NowStageDamage) NowStageDamage = ReminderDamage;

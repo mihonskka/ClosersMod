@@ -15,6 +15,7 @@ namespace ClosersItem.Equipments
 		{
 			base.Init();
 			this.PlusStat.maxhp = 12;
+			this.PlusStat.def = 10;
 		}
 
 		int CardCount = 0;
@@ -25,7 +26,7 @@ namespace ClosersItem.Equipments
 		public void SkillUse(Skill SkillD, List<BattleChar> Targets)
 		{
 			CardCount += 1;
-			clog.iw($"EEC: CC: {CardCount}; TN:{BattleSystem.instance.TurnNum}");
+			//clog.iw($"EEC: CC: {CardCount}; TN:{BattleSystem.instance.TurnNum}");
 			if (CardCount == BattleSystem.instance.TurnNum)
 			{
 				this.BChar.MyTeam.BasicSkillRefill(this.BChar, this.BChar.BattleBasicskillRefill);
